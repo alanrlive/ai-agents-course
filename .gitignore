@@ -1,0 +1,9 @@
+ # Ignore lessons folder
+Lessons/
+
+# Ignore sensitive and unnecessary files
+.env
+venv/
+__pycache__/
+*.zip
+*.pyc
