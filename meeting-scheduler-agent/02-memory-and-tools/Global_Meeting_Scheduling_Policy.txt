@@ -1,0 +1,64 @@
+Elevator Financial Services — Global Meeting Scheduling Policy
+Last updated: April 2026
+
+=== PURPOSE ===
+
+This policy sets the global standards for scheduling meetings across all Elevator Financial Services offices. It applies to all employees and contractors. Office-specific policies supplement this document and take precedence where there is a conflict.
+
+=== NOTICE PERIODS ===
+
+Minimum notice periods by meeting type:
+- Informal team check-in (up to 4 attendees): 2 working days
+- Cross-team working session (5–10 attendees): 5 working days
+- Steering committee or leadership review: 10 working days
+- All-hands or firm-wide meeting: 15 working days
+- Client-facing meetings: 10 working days minimum; confirm with the client's EA where possible
+
+Do not schedule meetings with less than the minimum notice period without explicit agreement from all required attendees.
+
+=== WORKING DAYS ===
+
+Elevator Financial Services defines a working day as Monday to Friday, excluding public holidays in the attendee's country of work. Where attendees span multiple countries, a day is only considered a working day if it is a working day for all required attendees.
+
+Optional attendees do not block a date from being considered a working day.
+
+=== CROSS-REGIONAL MEETING RULES ===
+
+When scheduling across three or more time zones:
+- Rotate meeting times across sessions so no single region always carries the unsociable slot
+- Document the rotation in the meeting series notes
+- Avoid scheduling before 08:00 or after 18:00 local time for any required attendee where an alternative exists
+- If no overlap window exists within those bounds, escalate to the meeting organiser's line manager for a decision
+
+=== FRIDAY AFTERNOONS ===
+
+Friday afternoons (after 13:00 local time) are protected time across all offices. Meetings should not be scheduled in this window unless:
+- The meeting is genuinely urgent and time-sensitive
+- All required attendees have confirmed availability
+- The organiser has noted the reason for the Friday afternoon slot in the meeting invite
+
+=== RECURRING MEETINGS ===
+
+Recurring meetings must be reviewed every quarter. The meeting organiser is responsible for confirming the meeting is still required and that the attendee list remains current. Recurring meetings with no agenda updates for 60 consecutive days should be cancelled or converted to async communication.
+
+=== MEETING LENGTH STANDARDS ===
+
+Standard durations:
+- Status update: 30 minutes
+- Working session: 60 minutes
+- Workshop or planning session: 90–120 minutes
+- Steering committee: 60 minutes with a 15-minute buffer for overrun
+
+Meetings should not be scheduled for longer than 2 hours without a minimum 15-minute break built into the agenda.
+
+=== AGENDA REQUIREMENTS ===
+
+All meetings with 5 or more attendees must include a written agenda shared with invitees at least 24 hours before the meeting. Steering committee and client-facing meetings require an agenda distributed with the original invitation.
+
+=== PUBLIC HOLIDAYS ===
+
+Organisers must check public holidays for all attendee locations before proposing a date. Do not assume a date is available simply because it is available in your own location. Use the firm's approved holiday calendar tool or verify via a reliable public source.
+
+=== ASYNC FIRST PRINCIPLE ===
+
+Before scheduling a meeting, consider whether the objective can be achieved asynchronously. Status updates, information sharing, and low-urgency decisions are candidates for async communication. Reserve meeting time for discussion, decisions that require debate, and relationship-building.

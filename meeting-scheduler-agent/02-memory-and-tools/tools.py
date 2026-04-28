@@ -58,12 +58,49 @@ TOOL_DEFINITIONS = [
             "required": ["start_date", "end_date", "holidays"],
         },
     },
+    {
+        "name": "search_scheduling_knowledge",
+        "description": (
+            "Search the Elevator Financial Services scheduling knowledge base for office-specific "
+            "working hours, cultural norms, meeting preferences, time zone guidance, and global "
+            "scheduling policies. Use this tool when the meeting notes include attendees from "
+            "specific offices, when you need to check office-specific constraints, or when you "
+            "need to apply the firm's global scheduling policy. Always search before proposing "
+            "a meeting date when attendee office locations are known."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "query": {
+                    "type": "string",
+                    "description": "A natural language query describing what scheduling information you need. For example: 'London office meeting preferences' or 'Dubai working hours and cultural considerations' or 'global notice period for steering committee'.",
+                }
+            },
+            "required": ["query"],
+        },
+    },
 ]
 
 import urllib.request
 import urllib.error
 import json
 from datetime import date, datetime, timedelta
+from pathlib import Path
+
+from dotenv import load_dotenv
+import chromadb
+from openai import OpenAI
+
+load_dotenv()
+
+_openai_client = OpenAI()
+_chroma_client = chromadb.PersistentClient(
+    path=str(Path(__file__).parent / "chroma_db")
+)
+_kb_collection = _chroma_client.get_or_create_collection(
+    name="elevator_fs_kb",
+    metadata={"hnsw:space": "cosine"},
+)
 
 
 def get_current_date() -> str:
@@ -133,3 +170,31 @@ def calculate_working_days(
         current += timedelta(days=1)
 
     return count
+
+
+def search_scheduling_knowledge(query: str, n_results: int = 3) -> str:
+    print(f"[RAG] Searching knowledge base for: {query}")
+    embedding_response = _openai_client.embeddings.create(
+        model="text-embedding-3-small",
+        input=query,
+    )
+    query_embedding = embedding_response.data[0].embedding
+
+    results = _kb_collection.query(
+        query_embeddings=[query_embedding],
+        n_results=n_results,
+        include=["documents", "metadatas"],
+    )
+
+    documents = results.get("documents", [[]])[0]
+    metadatas = results.get("metadatas", [[]])[0]
+
+    if not documents:
+        return "No relevant information found in the scheduling knowledge base."
+
+    parts = []
+    for doc, meta in zip(documents, metadatas):
+        source = meta.get("source", "unknown")
+        parts.append(f"[Source: {source}] {doc}")
+
+    return "\n\n".join(parts)

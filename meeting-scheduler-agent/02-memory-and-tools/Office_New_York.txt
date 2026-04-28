@@ -1,0 +1,56 @@
+Elevator Financial Services — Office Guide: New York
+Last updated: April 2026
+
+=== OFFICE OVERVIEW ===
+
+Location: 1221 Avenue of the Americas, New York, NY 10020
+Time zone: EST (UTC-5) / EDT (UTC-4) from second Sunday in March to first Sunday in November
+Regional head: Americas
+
+The New York office is Elevator Financial Services' Americas headquarters. It covers US and Canadian client relationships, Americas-based delivery teams, and the firm's US regulatory and compliance function.
+
+=== WORKING HOURS ===
+
+Core hours: 09:00 to 17:30 EST/EDT, Monday to Friday
+Early starts are common in financial services. Many senior staff are available from 07:30 EST.
+The New York office observes US federal holidays and New York State holidays.
+
+=== MEETING PREFERENCES ===
+
+- The New York team operates on a fast-paced meeting culture. Meetings are expected to start and end on time. Build in hard stops.
+- Monday mornings are typically reserved for internal team planning. Cross-office calls before 10:00 EST on Mondays are discouraged.
+- Thursday afternoons are the preferred window for cross-regional calls with EMEA, as they fall within the London working day overlap.
+- End-of-day calls (after 16:30 EST) are strongly discouraged. The New York team typically wraps client commitments by 17:00.
+- All steering committee meetings involving New York participants should have a written agenda distributed at least 48 hours in advance.
+
+=== TIME ZONE CONSIDERATIONS ===
+
+When scheduling with other Elevator offices:
+- London: 5 hours ahead of EST (4 hours during EDT). Best overlap: 09:00–12:00 EST.
+- Warsaw: 6 hours ahead of EST (5 hours during EDT). Overlap window: 09:00–11:00 EST.
+- Dubai: 9 hours ahead of EST. Overlap window: 09:00–10:00 EST only. Very limited.
+- Singapore: 13 hours ahead of EST. No same-day overlap. Async strongly preferred. If a live call is required, early morning EST (07:00–08:00) aligns with late afternoon Singapore.
+- Sydney: 15–16 hours ahead of EST. No practical overlap. Use async communication.
+
+Note: The US switches to daylight saving time several weeks before the UK. During this transition window (typically two weeks in March and one week in November), time zone offsets between New York and European offices shift by one hour. Always verify the actual offset during these periods.
+
+=== PUBLIC HOLIDAYS ===
+
+The New York office observes US federal holidays including:
+- New Year's Day
+- Martin Luther King Jr. Day (third Monday in January)
+- Presidents' Day (third Monday in February)
+- Memorial Day (last Monday in May)
+- Independence Day (4 July)
+- Labor Day (first Monday in September)
+- Thanksgiving Day (fourth Thursday in November) — note: the Friday after Thanksgiving (Black Friday) is also treated as an office closure at Elevator Financial Services
+- Christmas Day
+
+New York State also observes Election Day as a public holiday in even-numbered years.
+
+=== CULTURAL AND PRACTICAL NOTES ===
+
+- Thanksgiving week (the full week of the fourth Thursday in November) sees significantly reduced availability. Avoid scheduling non-urgent cross-regional meetings in this week.
+- The period between Christmas and New Year is typically very quiet. Most New York staff take this as annual leave.
+- Financial services quarter-end pressures are acute in New York. Avoid discretionary meetings in the last two weeks of March, June, September, and December.
+- New York operates on a direct communication style. Meetings are expected to have a clear objective and decision point. Open-ended discussion meetings are not well received without a clear framing.

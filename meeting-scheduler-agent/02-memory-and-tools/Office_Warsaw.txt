@@ -1,0 +1,60 @@
+Elevator Financial Services — Office Guide: Warsaw
+Last updated: April 2026
+
+=== OFFICE OVERVIEW ===
+
+Location: Warsaw Financial Centre, ul. Emilii Plater 53, 00-113 Warsaw, Poland
+Time zone: CET (UTC+1) / CEST (UTC+2) from last Sunday in March to last Sunday in October
+Regional head: EMEA (reports to London)
+
+The Warsaw office is Elevator Financial Services' Central European hub, established in 2019 to support EMEA delivery operations and to house the firm's growing technology and data engineering function. Warsaw is a key delivery location and has seen significant headcount growth, particularly in AI, cloud, and data disciplines.
+
+=== WORKING HOURS ===
+
+Core hours: 09:00 to 17:30 CET/CEST, Monday to Friday
+The Warsaw office observes Polish public holidays as defined by Polish law.
+Poland switches to CEST on the last Sunday in March and returns to CET on the last Sunday in October, in line with the EU daylight saving schedule.
+
+=== MEETING PREFERENCES ===
+
+- The Warsaw team aligns closely with the London office given the EMEA shared structure. Most cross-regional calls are designed around a London-Warsaw overlap, which covers almost the full working day.
+- Monday mornings before 10:00 CET are reserved for internal team planning and stand-ups. Do not schedule cross-team meetings in this window.
+- The Warsaw office has a strong engineering culture. Deep-work focus time is valued, particularly in the afternoons. Where possible, schedule collaborative meetings in the morning and leave afternoons for focused delivery work.
+- Wednesday is the preferred day for EMEA-wide calls, consistent with the London office preference.
+- The Warsaw team participates in the firm-wide EMEA delivery review every other Thursday at 10:00 CET. Avoid scheduling competing meetings for delivery leads on these mornings.
+
+=== TIME ZONE CONSIDERATIONS ===
+
+When scheduling with other Elevator offices:
+- London: 1 hour behind CET (same offset during BST/CEST transition — both countries change on the same Sunday, so the offset remains consistent). Near-full working day overlap.
+- New York: 6 hours behind CET (5 hours during EDT). Overlap window: 15:00–17:30 CET works for both offices.
+- Dubai: 3 hours ahead of CET. Good overlap: 09:00–14:30 CET.
+- Singapore: 7 hours ahead of CET. Very limited overlap: 08:00–10:00 CET (15:00–17:00 SGT). Early starts required from Warsaw.
+- Sydney: 9–10 hours ahead of CET. No practical overlap within standard hours. Async preferred.
+
+=== PUBLIC HOLIDAYS ===
+
+Poland observes the following public holidays:
+- New Year's Day (1 January)
+- Epiphany (6 January)
+- Easter Sunday and Easter Monday (dates vary)
+- Labour Day (1 May)
+- Constitution Day (3 May)
+- Pentecost Sunday (Zielone Swiatki — 49 days after Easter)
+- Corpus Christi (60 days after Easter)
+- Assumption of Mary (15 August)
+- All Saints' Day (1 November)
+- Independence Day (11 November)
+- Christmas Day (25 December)
+- Second Day of Christmas (26 December)
+
+Note: Poland has one of the highest numbers of public holidays in the EU. Pay particular attention to the May cluster (1 May and 3 May), which often results in a long weekend or a bridging day taken as annual leave. The period around 1 November (All Saints' Day) is also a significant cultural observance and many Polish employees take leave around this date. Similarly, 15 August (Assumption of Mary) is a public holiday that falls mid-summer and is often overlooked by non-Polish colleagues.
+
+=== CULTURAL AND PRACTICAL NOTES ===
+
+- Poland has a strong working culture with high professional standards. The Warsaw team is known within Elevator for delivery rigour and technical depth.
+- The Christmas period in Poland begins on Christmas Eve (24 December), which is the primary family celebration day. Many Polish employees take 24 December as annual leave even when it is not a public holiday. Plan accordingly.
+- Easter is a significant holiday in Poland. Good Friday is not a public holiday in Poland, but many employees take it as annual leave. Easter Monday is a public holiday. The Thursday before Easter is commonly taken as leave as well.
+- August is a popular holiday month in Poland. Expect reduced in-person attendance in Warsaw during August, particularly the first two weeks.
+- The Warsaw office has a bilingual working environment. English is the language of all cross-office communication. Internal Warsaw team meetings may be conducted in Polish.
+- Warsaw operates in the same EMEA reporting line as London. Delivery governance, risk reporting, and escalation paths follow the EMEA structure defined by the London office.

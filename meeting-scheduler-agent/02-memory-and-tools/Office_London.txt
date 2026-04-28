@@ -1,0 +1,52 @@
+Elevator Financial Services — Office Guide: London
+Last updated: April 2026
+
+=== OFFICE OVERVIEW ===
+
+Location: 22 Bishopsgate, London, EC2N 4BQ
+Time zone: GMT (UTC+0) / BST (UTC+1) from last Sunday in March to last Sunday in October
+Regional head: EMEA
+
+The London office is Elevator Financial Services' global headquarters and the largest office by headcount. It houses the firm's executive leadership, EMEA client coverage, risk and compliance functions, and the global technology delivery team.
+
+=== WORKING HOURS ===
+
+Core hours: 09:00 to 17:30 GMT/BST, Monday to Friday
+Flexible start: Employees may start between 07:30 and 10:00, with corresponding end times
+Lunch: 12:30 to 13:30 is a protected lunch window; avoid scheduling meetings in this slot where possible
+
+The London office observes all England and Wales public holidays. Scotland and Northern Ireland employees follow their respective regional holiday calendars.
+
+=== MEETING PREFERENCES ===
+
+- Monday mornings before 10:00 are protected for team planning. Do not schedule cross-team or external meetings in this window.
+- Wednesday is the preferred day for cross-regional calls, as it sits mid-week and avoids the Monday morning and Friday afternoon protected windows.
+- The London team participates in a firm-wide leadership sync every other Tuesday at 08:00 GMT. Avoid scheduling competing meetings for senior stakeholders on these mornings.
+- In-person attendance is expected for steering committee meetings held at the London office. Remote attendance requires prior approval from the meeting organiser.
+
+=== TIME ZONE CONSIDERATIONS ===
+
+When scheduling with other Elevator offices:
+- New York: 5 hours behind GMT (4 hours behind during BST). Overlap window: 14:00–17:00 GMT works well for both offices.
+- Warsaw: 1 hour ahead of GMT (same offset during BST transition periods — check carefully in March and October). Overlap window: almost full working day.
+- Dubai: 4 hours ahead of GMT. Overlap window: 09:00–13:00 GMT.
+- Singapore: 8 hours ahead of GMT. Overlap window: 08:00–10:00 GMT only. Early starts required from London.
+- Sydney: 10–11 hours ahead of GMT depending on daylight saving. Overlap window: 08:00–09:00 GMT. Extremely limited — consider async first.
+
+=== BANK HOLIDAYS AND OFFICE CLOSURES ===
+
+The London office observes all England and Wales bank holidays, including:
+- New Year's Day
+- Good Friday and Easter Monday
+- Early May Bank Holiday
+- Spring Bank Holiday
+- Summer Bank Holiday (last Monday in August)
+- Christmas Day and Boxing Day
+
+The office operates a reduced skeleton staff between Christmas Day and New Year's Day. Non-urgent meetings should not be scheduled in this period.
+
+=== CULTURAL AND PRACTICAL NOTES ===
+
+- The London office has a strong in-person culture, particularly for client meetings and leadership sessions. Hybrid attendance is supported but in-person is preferred where feasible.
+- August is a common holiday period in the UK. Expect reduced availability across the London team during the first two weeks of August.
+- The financial services calendar in London is heavily influenced by regulatory reporting cycles. Avoid scheduling discretionary meetings during quarter-end (last two weeks of March, June, September, December) without checking with the relevant team.

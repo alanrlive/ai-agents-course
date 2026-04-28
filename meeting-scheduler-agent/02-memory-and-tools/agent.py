@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 import anthropic
 import tools as tool_module
 from tools import TOOL_DEFINITIONS
+import memory_manager
 
 load_dotenv()
 
@@ -13,13 +14,16 @@ MAX_ITERATIONS = 10
 
 SYSTEM_PROMPT = """You are a Meeting Scheduler Agent helping delivery managers coordinate meetings across distributed teams.
 
-When given meeting notes containing attendee names, their country locations, and the date of the last meeting, you must:
-1. Identify all countries represented by the attendees.
-2. Use get_current_date to confirm today's date.
-3. Use get_public_holidays to fetch holidays for each country for the relevant year(s).
-4. Use calculate_working_days to count working days between dates.
-5. Propose a next meeting date that falls between 10 and 15 working days after the last meeting.
-6. Ensure the proposed date is not a weekend or a public holiday in any attendee country.
+When given meeting notes containing attendee names, their office locations, and the date of the last meeting, you must follow these steps in order:
+1. Identify all offices represented by the attendees.
+2. Use search_scheduling_knowledge for EACH office mentioned (e.g. "London office working hours and meeting preferences", "Warsaw office constraints"). Always call this tool before proposing any date.
+3. Use search_scheduling_knowledge to retrieve the global scheduling policy (e.g. "global notice period and scheduling policy").
+4. Use get_current_date to confirm today's date.
+5. Use get_public_holidays to fetch holidays for each country for the relevant year(s).
+6. Use calculate_working_days to count working days between dates.
+7. Propose a next meeting date that falls between 10 and 15 working days after the last meeting.
+8. Ensure the proposed date is not a weekend or a public holiday in any attendee country.
+9. In your final answer, explicitly reference the office-specific constraints you found (e.g. Monday morning protection, Wednesday preference, prayer times).
 
 Always explain your reasoning and clearly state the proposed meeting date."""
 
@@ -27,6 +31,7 @@ TOOL_DISPATCH = {
     "get_current_date": tool_module.get_current_date,
     "get_public_holidays": tool_module.get_public_holidays,
     "calculate_working_days": tool_module.calculate_working_days,
+    "search_scheduling_knowledge": tool_module.search_scheduling_knowledge,
 }
 
 
@@ -39,6 +44,20 @@ def call_tool(name: str, inputs: dict):
 
 def run_agent(user_input: str):
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+
+    history = memory_manager.load_history()
+    print(f"[Memory] Loaded {len(history)} previous interactions")
+
+    formatted_history = memory_manager.format_history_for_prompt(history)
+    if formatted_history:
+        system_prompt = (
+            SYSTEM_PROMPT
+            + "\n\n=== RECENT CONVERSATION HISTORY ===\n"
+            + formatted_history
+            + "\n==================================="
+        )
+    else:
+        system_prompt = SYSTEM_PROMPT
 
     messages = [{"role": "user", "content": user_input}]
 
@@ -53,7 +72,7 @@ def run_agent(user_input: str):
         response = client.messages.create(
             model=MODEL,
             max_tokens=4096,
-            system=SYSTEM_PROMPT,
+            system=system_prompt,
             tools=TOOL_DEFINITIONS,
             messages=messages,
         )
@@ -72,9 +91,14 @@ def run_agent(user_input: str):
                 print(f"\n{'='*60}")
                 print("FINAL ANSWER")
                 print(f"{'='*60}")
+                final_text = ""
                 for block in response.content:
                     if block.type == "text":
                         print(block.text)
+                        final_text += block.text
+                updated_history = memory_manager.add_interaction(history, user_input, final_text)
+                memory_manager.save_history(updated_history)
+                print(f"[Memory] Saved interaction. Total history: {len(updated_history)} entries")
                 return response
 
         # Append the assistant turn (full content list)

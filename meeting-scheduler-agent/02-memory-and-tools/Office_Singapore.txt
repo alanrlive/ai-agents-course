@@ -1,0 +1,55 @@
+Elevator Financial Services — Office Guide: Singapore
+Last updated: April 2026
+
+=== OFFICE OVERVIEW ===
+
+Location: One Raffles Quay, North Tower, Singapore 048583
+Time zone: SGT (UTC+8) — Singapore does not observe daylight saving time
+Regional head: Asia-Pacific
+
+The Singapore office serves as Elevator Financial Services' Asia-Pacific hub. It covers APAC client relationships, regional delivery coordination, and acts as the primary connection point between the firm's European and Australian operations.
+
+=== WORKING HOURS ===
+
+Core hours: 09:00 to 18:00 SGT, Monday to Friday
+The Singapore office observes Singapore public holidays as gazetted by the Ministry of Manpower each year.
+Late evening calls (after 19:00 SGT) are not expected of Singapore staff unless pre-agreed for critical delivery situations.
+
+=== MEETING PREFERENCES ===
+
+- The Singapore team is the most time-zone constrained office in the Elevator network. When scheduling cross-regional calls, Singapore's window must be considered first, as it has the least flexibility.
+- The preferred window for cross-regional calls involving Singapore and EMEA is 08:00–10:00 SGT (00:00–02:00 GMT / 01:00–03:00 CET). This requires early starts from London or Warsaw. These calls should be rotated so Singapore does not always take the late slot.
+- For calls involving Singapore and New York only, there is no practical same-day overlap. Use async communication or accept that one party will be outside core hours.
+- Singapore public holidays often fall mid-week. Always verify before scheduling.
+
+=== TIME ZONE CONSIDERATIONS ===
+
+When scheduling with other Elevator offices:
+- London: 7–8 hours behind SGT depending on BST. Overlap: 08:00–10:00 SGT (start of Singapore day, end of London previous day — check carefully).
+- Warsaw: 6–7 hours behind SGT. Similar constraints to London.
+- Dubai: 4 hours behind SGT. Good overlap: 09:00–14:00 SGT aligns with Dubai core hours.
+- Sydney: 2–3 hours ahead of SGT depending on AEDT. Good overlap: 09:00–15:00 SGT.
+- New York: 12–13 hours behind SGT. No practical overlap. Async preferred.
+
+=== PUBLIC HOLIDAYS ===
+
+Singapore observes the following public holidays (dates vary by year):
+- New Year's Day (1 January)
+- Chinese New Year (2 days — dates vary, typically January or February)
+- Good Friday
+- Hari Raya Puasa (dates vary)
+- Labour Day (1 May)
+- Vesak Day (date varies)
+- Hari Raya Haji (dates vary)
+- National Day (9 August)
+- Deepavali (date varies)
+- Christmas Day (25 December)
+
+Note: Chinese New Year is a significant period of reduced availability. Many Singapore-based staff take extended leave around this period. Check with the Singapore office manager before scheduling meetings in the two weeks surrounding Chinese New Year.
+
+=== CULTURAL AND PRACTICAL NOTES ===
+
+- Singapore has a multicultural workforce. Be aware that different religious observances affect individual availability. This is especially relevant during Ramadan, Chinese New Year, and Deepavali periods.
+- The Singapore office values punctuality. Starting meetings late reflects poorly on the organiser.
+- Air travel between Singapore and European offices is long (12–14 hours). When scheduling in-person meetings requiring travel from EMEA, allow at least one recovery day before expecting the traveller to present or lead sessions.
+- August is Singapore's National Day month. The office is festive but fully operational apart from the public holiday on 9 August.

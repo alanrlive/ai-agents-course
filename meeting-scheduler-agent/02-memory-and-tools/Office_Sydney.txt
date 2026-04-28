@@ -1,0 +1,62 @@
+Elevator Financial Services — Office Guide: Sydney
+Last updated: April 2026
+
+=== OFFICE OVERVIEW ===
+
+Location: Governor Phillip Tower, 1 Farrer Place, Sydney NSW 2000
+Time zone: AEDT (UTC+11) in summer / AEST (UTC+10) in winter
+Daylight saving: last Sunday in October to first Sunday in April
+Regional head: Asia-Pacific (shared with Singapore)
+
+The Sydney office is Elevator Financial Services' Australian base, serving Australian and New Zealand clients and supporting APAC delivery coordination alongside the Singapore office.
+
+=== WORKING HOURS ===
+
+Core hours: 09:00 to 17:30 AEDT/AEST, Monday to Friday
+The Sydney office observes Australian federal public holidays and New South Wales state public holidays.
+Australia and the UK are on opposite daylight saving schedules. When the UK moves to BST in March, Australia is moving out of AEDT. This creates a shifting offset that must be checked carefully between October and April.
+
+=== MEETING PREFERENCES ===
+
+- Sydney is the most time-zone isolated of all Elevator offices. Cross-regional calls with EMEA require very early starts from Sydney or very late finishes from Europe. These should be rotated fairly.
+- The preferred window for cross-regional calls involving Sydney and London is 08:00–09:00 AEDT (21:00–22:00 GMT previous day / 22:00–23:00 CET). This is outside standard hours for both offices and should be treated as an exception, not a routine slot.
+- Sydney to Singapore calls are the most practical cross-APAC pairing. The overlap window of 09:00–15:00 AEDT covers most of the Singapore working day.
+- Avoid scheduling calls for Sydney participants before 08:00 or after 18:00 local time without explicit agreement.
+- Friday afternoons are particularly valued by the Sydney team. Respect the global Friday afternoon protected window.
+
+=== TIME ZONE CONSIDERATIONS ===
+
+When scheduling with other Elevator offices:
+- London: 10–11 hours ahead of GMT depending on daylight saving in both countries. Overlap is effectively zero within standard hours. Async strongly preferred.
+- Warsaw: 9–10 hours ahead of CET. Same constraints as London.
+- Dubai: 6–7 hours ahead of GST. Limited overlap: 09:00–11:00 AEDT.
+- Singapore: 2–3 hours ahead of SGT. Best APAC pairing. Good overlap throughout the day.
+- New York: 15–16 hours ahead of EST. No practical overlap. Async only.
+
+Note: The offset between Sydney and all other offices changes twice per year due to the southern hemisphere daylight saving schedule running opposite to the northern hemisphere. Always verify the current offset before scheduling.
+
+=== PUBLIC HOLIDAYS ===
+
+The Sydney office observes Australian federal and New South Wales public holidays including:
+- New Year's Day (1 January)
+- Australia Day (26 January)
+- Good Friday
+- Easter Saturday (NSW)
+- Easter Sunday
+- Easter Monday
+- Anzac Day (25 April)
+- King's Birthday (second Monday in June in NSW)
+- Bank Holiday (first Monday in August in NSW)
+- Labour Day (first Monday in October in NSW)
+- Christmas Day (25 December)
+- Boxing Day (26 December)
+
+Note: Australia Day (26 January) and Anzac Day (25 April) are significant national observances. The Sydney office is fully closed on these days.
+
+=== CULTURAL AND PRACTICAL NOTES ===
+
+- The Sydney team has a direct, informal communication style. Meetings are expected to be practical and outcome-focused.
+- The Christmas to New Year period (25 December to 1 January) is a near-universal shutdown in Australia. The Sydney office is closed. Many staff take additional leave in the first two weeks of January. Expect very limited availability from mid-December through to mid-January.
+- January is the Australian summer holiday period. Availability across the Sydney team is reduced. Avoid scheduling critical governance meetings in January where possible.
+- Public holidays in Australia are taken seriously. Do not expect Sydney colleagues to be available on public holiday dates.
+- The Sydney office has a strong connection to the Singapore office given the APAC shared leadership structure. Joint APAC calls typically originate from Singapore and Sydney should be treated as a co-equal voice in these sessions.
