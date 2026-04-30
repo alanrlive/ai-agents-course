@@ -1,0 +1,68 @@
+Sprint 4 Review - CRM/Payments Integration
+29 Apr 2026 // 10am BST (5pm SGT)
+
+Attendees: Alan (DM), Sarah (TL), Marco (CRM dev), Priya (payments, SG)
+James (DevOps, SG) - joined ~25 mins late, had to drop early
+
+---
+
+Velocity / done this sprint:
+- CRM field mapping v1 done (Marco) - most fields mapped, null handling still TBD
+- Payments sandbox env stood up (Priya) - but not properly usable yet, see blockers
+- Auth token flow design agreed on paper
+
+---
+
+BLOCKERS
+
+API auth token issue - payments sandbox is returning 401 on every test call.
+Priya thinks it's the token scope config on their side, possibly needs elevated perms.
+Marco tried hitting it yesterday, same result. Not clear if this is CRM-side config or
+payments API gateway config. Sarah to look at it with Priya but no slot agreed yet.
+This is blocking ALL payments integration testing. Critical.
+
+Also - Priya flagged sandbox connection dropping after ~90 secs of inactivity.
+Looks like a timeout config issue. No ticket raised for this yet. Needs one.
+
+---
+
+Decisions / discussion:
+
+Null field handling - CRM sends nulls for optional fields, payments schema expects
+empty string or omits the field entirely. Marco raised it, no one had a definitive answer.
+Sarah said it depends on the payments API contract, Priya wasn't sure of the exact
+spec off the top of her head. Needs to be resolved properly. Left open.
+
+Security review sign-off - Alan mentioned this is overdue. Was meant to be done
+before testing phase. Wasn't clear in the meeting who owns this - Sarah thought it
+was on Alan, Alan thought it was flagged to the CISO's team. Needs chasing urgently.
+
+---
+
+Timeline:
+
+Alan raised end of May go-live. General vibe in the room was... not great.
+Sarah didn't say it was impossible but said "there's a lot of unknowns still."
+Priya flagged she's on leave 12-16 May. Nobody said the date needs to move
+officially but it felt like that conversation is coming.
+
+---
+
+Misc / picked up when James joined:
+
+James flagged deployment pipeline needs updating for the new payments env vars.
+He'll do it but needs the final var names from Priya first - Priya to send over.
+
+Scheduling next sync is a pain - James and Priya are SGT, rest are BST.
+Someone suggested alternating the meeting time. Not agreed, just mentioned.
+Alan to sort out a recurring slot that works for both sides.
+
+---
+
+Next sprint goals (rough):
+- Unblock auth token issue
+- Resolve null handling
+- Payments integration test - first real end-to-end
+- Get security sign-off sorted
+
+Next review TBC - probably 2 weeks

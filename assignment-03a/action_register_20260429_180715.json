@@ -1,0 +1,112 @@
+{
+  "actions": [
+    {
+      "action_id": "A001",
+      "description": "Investigate and resolve API integration issue affecting CRM payments project",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Extracted data identifies 'API thing' as a blocker but does not name the responsible engineer or team lead. Ownership must be clarified.",
+      "basis_for_deadline": "Marked as blocker and overdue in context, but no specific deadline date provided in source material. Requires urgent prioritization once owner is assigned.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A002",
+      "description": "Diagnose and fix sandbox environment stability issue (drops out intermittently)",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "No owner identified in source material. Infrastructure or DevOps team likely responsible, but not named.",
+      "basis_for_deadline": "Described as 'really annoying' blocker with no ticket yet. Requires immediate attention but no deadline specified.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A003",
+      "description": "Review and resolve field mapping issues identified by Marco; determine which fields are not working correctly",
+      "owner": "Marco",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Marco presented the field mapping analysis and is best positioned to explain and fix the issues identified.",
+      "basis_for_deadline": "Blocker affecting pipeline work, but no specific deadline provided. Should be resolved urgently.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A004",
+      "description": "Chase and complete overdue security review/remediation for CRM payments project",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Security owner not identified in source material. Likely a security team lead or compliance officer, but requires clarification.",
+      "basis_for_deadline": "Explicitly marked as overdue. Requires immediate escalation and completion.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A005",
+      "description": "Provide James with required information/deliverable to unblock pipeline update work",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Source material states 'james needs something from someone' but does not identify who holds the required information or deliverable.",
+      "basis_for_deadline": "Blocker preventing James from proceeding, but no deadline specified. Should be resolved immediately.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A006",
+      "description": "Make decision on handling null fields in CRM payments integration",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "medium",
+      "basis_for_owner": "No decision maker identified. Likely requires product owner, tech lead, or cross-team consensus.",
+      "basis_for_deadline": "Unresolved item with no decision yet. Should be resolved before field mapping work is finalized.",
+      "depends_on": [
+        "A003"
+      ]
+    },
+    {
+      "action_id": "A007",
+      "description": "Clarify ownership and responsibilities for CRM payments project going forward",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "medium",
+      "basis_for_owner": "Project leadership or team manager should facilitate this clarification, but not identified in source material.",
+      "basis_for_deadline": "Unresolved governance item. Should be completed before next sprint planning.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A008",
+      "description": "Reassess May deadline feasibility for CRM payments project given current blockers",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "medium",
+      "basis_for_owner": "Project manager or delivery lead should own this assessment, but not identified in source material.",
+      "basis_for_deadline": "Unresolved item requiring decision. Should be addressed once blockers (A001-A005) are clarified.",
+      "depends_on": [
+        "A001",
+        "A002",
+        "A003",
+        "A004",
+        "A005"
+      ]
+    },
+    {
+      "action_id": "A009",
+      "description": "Address timezone scheduling challenges affecting Singapore and other distributed team members",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "low",
+      "basis_for_owner": "Project coordinator or team manager should own scheduling logistics, but not identified.",
+      "basis_for_deadline": "Process/scheduling item with no urgency indicated. Can be addressed after critical blockers are resolved.",
+      "depends_on": []
+    }
+  ],
+  "open_questions": [
+    "Who owns the API integration issue and what is the target resolution date?",
+    "Which team (DevOps/Infrastructure) owns the sandbox stability issue?",
+    "What specific information or deliverable does James need, and who is responsible for providing it?",
+    "Who is the security owner responsible for the overdue security review?",
+    "What is the decision-making process and owner for null field handling in the field mapping?",
+    "Who should be assigned as the primary owner/lead for the CRM payments project going forward?",
+    "Is the May deadline still realistic given the current blockers, and who should make this decision?",
+    "What is the exact meeting date (only 'sometime last week' was provided) to establish proper timeline context?"
+  ]
+}

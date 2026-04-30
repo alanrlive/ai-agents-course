@@ -1,0 +1,129 @@
+{
+  "actions": [
+    {
+      "action_id": "A001",
+      "description": "Investigate and resolve API auth token 401 error on payments sandbox. Determine whether issue is CRM-side config, payments API gateway config, or token scope configuration. This is blocking all payments integration testing.",
+      "owner": "Sarah",
+      "deadline": "2026-05-02",
+      "priority": "high",
+      "basis_for_owner": "Sarah (TL) explicitly volunteered to look at auth token issue with Priya. As tech lead, she is responsible for unblocking critical integration issues.",
+      "basis_for_deadline": "This is a critical blocker preventing testing. Meeting was 29 Apr; resolving within 3 days allows testing to proceed before Priya's leave on 12 May.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A002",
+      "description": "Coordinate with Sarah on auth token 401 investigation. Verify token scope configuration on payments side and provide any additional debugging information needed.",
+      "owner": "Priya",
+      "deadline": "2026-05-02",
+      "priority": "high",
+      "basis_for_owner": "Priya owns the payments sandbox environment and suspects token scope config issue on their side. She must be involved in the investigation.",
+      "basis_for_deadline": "Same critical blocker as A001. Must be resolved before Priya's leave 12-16 May to maintain momentum.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A003",
+      "description": "Investigate and fix sandbox connection timeout issue (connection dropping after ~90 seconds of inactivity). Identify and update timeout configuration.",
+      "owner": "Priya",
+      "deadline": "2026-05-05",
+      "priority": "high",
+      "basis_for_owner": "Priya stood up the payments sandbox environment and is responsible for its operational configuration.",
+      "basis_for_deadline": "Secondary blocker affecting usability of sandbox. Should be resolved early in the week of 5 May, before Priya's leave on 12 May.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A004",
+      "description": "Raise ticket for sandbox timeout configuration issue to track the fix and ensure it is properly documented.",
+      "owner": "Priya",
+      "deadline": "2026-05-02",
+      "priority": "medium",
+      "basis_for_owner": "Priya identified the issue and owns the sandbox environment. She should create the ticket to track the work.",
+      "basis_for_deadline": "Should be created immediately after identification to ensure visibility and tracking. Meeting was 29 Apr.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A005",
+      "description": "Clarify null field handling specification with payments API contract. Determine whether payments schema expects empty strings, omitted fields, or null values for optional fields. Document the contract requirement.",
+      "owner": "Priya",
+      "deadline": "2026-05-05",
+      "priority": "high",
+      "basis_for_owner": "Priya owns the payments integration and is responsible for understanding the payments API contract. She flagged uncertainty about the exact spec.",
+      "basis_for_deadline": "This blocks CRM field mapping v1 finalization and must be resolved before testing can proceed. Should be clarified before Priya's leave on 12 May.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A006",
+      "description": "Update CRM field mapping v1 to implement null field handling based on payments API contract specification. Ensure CRM correctly transforms null values according to payments schema requirements.",
+      "owner": "Marco",
+      "deadline": "2026-05-09",
+      "priority": "high",
+      "basis_for_owner": "Marco completed the initial CRM field mapping v1 and raised the null handling issue. He must implement the fix.",
+      "basis_for_deadline": "Depends on A005 (contract clarification). Must be completed before testing phase can proceed. Target before Priya's leave ends on 16 May.",
+      "depends_on": [
+        "A005"
+      ]
+    },
+    {
+      "action_id": "A007",
+      "description": "Clarify security review sign-off ownership and status. Determine whether CISO's team owns the review or if it should be assigned to another party. Obtain current status and timeline for completion.",
+      "owner": "Alan",
+      "deadline": "2026-05-02",
+      "priority": "high",
+      "basis_for_owner": "Alan is the DM and mentioned the overdue security review sign-off. He must clarify ownership and drive resolution of this blocker.",
+      "basis_for_deadline": "Security review is overdue and must be completed before testing phase. This is a critical path item for the May go-live timeline.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A008",
+      "description": "Obtain final environment variable names for payments integration from Priya and provide to James for deployment pipeline update.",
+      "owner": "Priya",
+      "deadline": "2026-05-06",
+      "priority": "high",
+      "basis_for_owner": "Priya owns the payments environment and must provide the final variable names. She committed to sending these to James.",
+      "basis_for_deadline": "James needs these before 12 May (start of Priya's leave) to update the deployment pipeline. Providing by 6 May allows time for James to implement.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A009",
+      "description": "Update deployment pipeline to include new payments environment variables. Implement changes once final variable names are received from Priya.",
+      "owner": "James",
+      "deadline": "2026-05-13",
+      "priority": "high",
+      "basis_for_owner": "James (DevOps) is responsible for deployment pipeline configuration and flagged the need for this update.",
+      "basis_for_deadline": "Must be completed before go-live testing. Deadline set for 13 May to allow time after Priya provides variable names (A008) and before critical testing phase.",
+      "depends_on": [
+        "A008"
+      ]
+    },
+    {
+      "action_id": "A010",
+      "description": "Assess feasibility of end of May go-live timeline. Evaluate remaining unknowns, blockers, and dependencies. Make official decision on whether to proceed with May go-live or adjust timeline.",
+      "owner": "Alan",
+      "deadline": "2026-05-09",
+      "priority": "high",
+      "basis_for_owner": "Alan (DM) raised the end of May go-live timeline. As decision maker, he must assess feasibility and make the official call.",
+      "basis_for_deadline": "Sarah noted 'there's a lot of unknowns still'. Decision must be made by 9 May to allow time for planning adjustments if timeline changes. This is before Priya's leave ends on 16 May.",
+      "depends_on": [
+        "A001",
+        "A003",
+        "A005",
+        "A007"
+      ]
+    },
+    {
+      "action_id": "A011",
+      "description": "Establish recurring meeting slot that accommodates both BST (UK) and SGT (Singapore) attendees. Propose alternating meeting times or find compromise time slot.",
+      "owner": "Alan",
+      "deadline": "2026-05-06",
+      "priority": "medium",
+      "basis_for_owner": "Alan is the DM and was tasked with sorting out the recurring meeting slot to address timezone coordination issues.",
+      "basis_for_deadline": "Recurring meetings are needed to maintain momentum on the integration. Should be established early in the week of 5 May to allow scheduling of follow-up meetings.",
+      "depends_on": []
+    }
+  ],
+  "open_questions": [
+    "Is the security review sign-off owned by the CISO's team or by someone else on the project? What is the current status and expected completion date?",
+    "What is the exact payments API contract specification for null/empty field handling? Does it expect null values, empty strings, or omitted fields?",
+    "Is the end of May go-live timeline still feasible given the current blockers and unknowns, or should it be adjusted?",
+    "What are the final environment variable names and formats needed for the payments integration in the deployment pipeline?"
+  ]
+}
