@@ -1,0 +1,54 @@
+{
+  "actions": [
+    {
+      "action_id": "A001",
+      "description": "Deploy to production",
+      "owner": "Tom",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Tom was explicitly assigned this task in the unresolved items.",
+      "basis_for_deadline": "Meeting date not provided in extracted data; Action Planner must confirm current week with meeting organizer to calculate exact Friday date.",
+      "depends_on": [
+        "A003"
+      ]
+    },
+    {
+      "action_id": "A002",
+      "description": "Send report to client",
+      "owner": "Alan",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Alan was explicitly assigned this task in the unresolved items.",
+      "basis_for_deadline": "Alan must confirm delivery deadline with client; Action Planner to obtain this from Alan before action is issued.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A003",
+      "description": "Restore staging environment to operational status",
+      "owner": "Infrastructure Team",
+      "deadline": "ASAP",
+      "priority": "high",
+      "basis_for_owner": "Staging environment is a critical blocker; ownership must be assigned to the responsible infrastructure/platform team lead before this action is issued.",
+      "basis_for_deadline": "Critical blocker requires immediate restoration; exact timeline depends on root cause analysis by assigned owner.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A004",
+      "description": "Implement v2 API as per sprint decision",
+      "owner": "Backend Lead",
+      "deadline": "TBC",
+      "priority": "medium",
+      "basis_for_owner": "v2 API implementation is a technical decision requiring ownership by the team responsible for API development and backend services.",
+      "basis_for_deadline": "Deadline to be set during sprint planning; assigned owner to confirm timeline based on A003 completion and sprint capacity.",
+      "depends_on": [
+        "A003"
+      ]
+    }
+  ],
+  "open_questions": [
+    "What is the current date? Required to convert 'by Friday' (A001) to ISO format YYYY-MM-DD.",
+    "What is the client's required delivery deadline for the report (A002)? Alan must confirm with client.",
+    "What is the root cause of the staging environment outage (A003)? Required to estimate restoration time.",
+    "What is the scope and complexity of v2 API implementation (A004)? Required to set realistic deadline during sprint planning."
+  ]
+}

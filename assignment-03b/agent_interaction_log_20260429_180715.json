@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp": "2026-04-29T16:06:51.956068+00:00",
+    "agent": "note_parser",
+    "input_summary": "Here are the raw meeting notes to parse:\n\n<notes>\nCRM payments meeting\nsometime last week\npeople from both teams were there, some from singapore\n\n- the API thing still isnt working, someone needs to l",
+    "output_preview": "```json\n{\n  \"meeting_metadata\": {\n    \"date\": \"sometime last week\",\n    \"attendees\": [\n      \"people from both teams\",\n      \"some from singapore\"\n    ],\n    \"project\": \"CRM payments\"\n  },\n  \"decisions_made\": [],\n  \"discussion_points\": [\n    \"API thing still isn't working\",\n    \"sandbox keeps droppi",
+    "tokens_used": 897,
+    "revision_round": 0
+  },
+  {
+    "timestamp": "2026-04-29T16:07:03.242031+00:00",
+    "agent": "action_planner",
+    "input_summary": "Here is the structured data extracted from the meeting notes:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"sometime last week\",\n    \"attendees\": [\n      \"people from both teams\",\n      \"so",
+    "output_preview": "```json\n{\n  \"actions\": [\n    {\n      \"action_id\": \"A001\",\n      \"description\": \"Investigate and resolve API integration issue affecting CRM payments project\",\n      \"owner\": \"TBC\",\n      \"deadline\": \"TBC\",\n      \"priority\": \"high\",\n      \"basis_for_owner\": \"Extracted data identifies 'API thing' as a",
+    "tokens_used": 2309,
+    "revision_round": 0
+  },
+  {
+    "timestamp": "2026-04-29T16:07:15.824972+00:00",
+    "agent": "critic",
+    "input_summary": "Here is the original extracted meeting data:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"sometime last week\",\n    \"attendees\": [\n      \"people from both teams\",\n      \"some from singapore",
+    "output_preview": "```json\n{\n  \"approved\": false,\n  \"overall_score\": 5,\n  \"strengths\": [\n    \"All nine discussion points and blockers from the extracted data are captured as actions \u2014 nothing was silently dropped.\",\n    \"Priority levels are generally consistent with blocker status: A001\u2013A005 are correctly marked high ",
+    "tokens_used": 3319,
+    "revision_round": 0
+  }
+]

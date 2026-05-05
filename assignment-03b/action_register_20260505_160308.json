@@ -1,0 +1,67 @@
+{
+  "actions": [
+    {
+      "action_id": "A001",
+      "description": "Fix login bug",
+      "owner": "Sarah",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Sarah is explicitly named in the unresolved items as responsible for fixing the login bug.",
+      "basis_for_deadline": "No deadline specified in source material. The blocker (staging env down) may affect testing timeline. Deadline should be set once staging environment is restored and testing can proceed.",
+      "depends_on": [
+        "A004"
+      ]
+    },
+    {
+      "action_id": "A002",
+      "description": "Deploy by Friday",
+      "owner": "Tom",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Tom is explicitly named in the unresolved items as responsible for deployment.",
+      "basis_for_deadline": "Stated as 'by Friday' but the meeting date is not specified, so the specific Friday cannot be determined. Assumed to be the Friday of the week containing the meeting (propose 2025-01-10 if meeting was week of 2025-01-06). Confirm actual deadline date.",
+      "depends_on": [
+        "A001",
+        "A004"
+      ]
+    },
+    {
+      "action_id": "A003",
+      "description": "Send report to client",
+      "owner": "Alan",
+      "deadline": "TBC",
+      "priority": "medium",
+      "basis_for_owner": "Alan is explicitly named in the unresolved items as responsible for sending the report to client.",
+      "basis_for_deadline": "No deadline specified in source material. Unclear whether this report should be sent after deployment is complete (A002) or can be prepared in parallel. Deadline cannot be set until this dependency is clarified.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A004",
+      "description": "Restore staging environment to operational status",
+      "owner": "DevOps Lead [TBC]",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "No specific owner identified in source material. This critical infrastructure blocker must be assigned to the DevOps or infrastructure team lead. Propose the appropriate DevOps team lead or confirm the owner responsible for staging environment maintenance.",
+      "basis_for_deadline": "This is a critical blocker affecting both the login bug fix (A001) and deployment (A002). Deadline should be set as soon as possible, ideally within 24 hours. Confirm target restoration time with DevOps team.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A005",
+      "description": "Schedule and confirm next meeting for Monday 9am",
+      "owner": "Alan [proposed]",
+      "deadline": "2025-01-13",
+      "priority": "low",
+      "basis_for_owner": "No explicit owner identified for meeting scheduling. Alan is listed first among attendees and is responsible for client communication (A003), suggesting organizational/coordination role. Propose Alan or confirm the appropriate project manager/coordinator.",
+      "basis_for_deadline": "Next meeting stated as 'Monday 9am'. Assuming the meeting notes are from the week of 2025-01-06, the Monday 9am meeting is assumed to be 2025-01-13. If the meeting is sooner or the source week is different, adjust deadline accordingly.",
+      "depends_on": []
+    }
+  ],
+  "open_questions": [
+    "How should the decision to use v2 API be tracked \u2014 is this a separate implementation action, or is it already captured in the deployment action (A002)?",
+    "Should the report to client (A003) be sent after deployment is complete (A002), or can it be prepared in parallel?",
+    "Who is the appropriate owner for restoring the staging environment \u2014 confirm the DevOps or infrastructure team lead responsible.",
+    "What is the actual Friday deadline for deployment (A002)? Confirm the specific date.",
+    "Who should own meeting scheduling (A005)? Confirm whether Alan or another team member is responsible.",
+    "What is the actual date of the next Monday 9am meeting? Confirm if it is 2025-01-13 or another date."
+  ]
+}

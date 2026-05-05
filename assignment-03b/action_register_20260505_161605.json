@@ -1,0 +1,63 @@
+{
+  "actions": [
+    {
+      "action_id": "A001",
+      "description": "Deploy to production using v2 API",
+      "owner": "Tom",
+      "deadline": "2025-01-10",
+      "priority": "high",
+      "basis_for_owner": "Tom was explicitly mentioned in context 'Deploy by Friday' indicating direct ownership of deployment task",
+      "basis_for_deadline": "Friday deadline inferred from meeting context; assuming current week with Friday as 2025-01-10",
+      "depends_on": [
+        "A003",
+        "A004"
+      ]
+    },
+    {
+      "action_id": "A002",
+      "description": "Send report to client",
+      "owner": "Alan",
+      "deadline": "TBC",
+      "priority": "medium",
+      "basis_for_owner": "Alan was explicitly mentioned in context 'Send report to client' indicating direct ownership",
+      "basis_for_deadline": "TBC pending client contact by Alan to confirm delivery deadline; must be confirmed by 2025-01-08 to allow sufficient lead time",
+      "depends_on": []
+    },
+    {
+      "action_id": "A003",
+      "description": "Fix login bug",
+      "owner": "Sarah",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Sarah was explicitly mentioned in context 'Fix login bug' indicating direct ownership",
+      "basis_for_deadline": "TBC pending Sarah's capacity review by 2025-01-08; must be completed before 2025-01-10 to unblock A001 deployment",
+      "depends_on": []
+    },
+    {
+      "action_id": "A004",
+      "description": "Restore staging environment to operational status",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Infrastructure team lead or DevOps owner not identified among attendees (Alan, Sarah, Tom); requires post-meeting escalation to infrastructure team lead by 2025-01-08",
+      "basis_for_deadline": "TBC pending infrastructure team assessment; critical blocker for testing before A001 deployment on 2025-01-10",
+      "depends_on": []
+    },
+    {
+      "action_id": "A005",
+      "description": "Confirm budget sign-off with finance stakeholder",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "medium",
+      "basis_for_owner": "Finance stakeholder not identified among attendees (Alan, Sarah, Tom); requires assignment by project manager or finance lead by 2025-01-08 to determine who owns budget confirmation",
+      "basis_for_deadline": "TBC pending identification of finance stakeholder and their availability; should be confirmed by 2025-01-15 to avoid project delays",
+      "depends_on": []
+    }
+  ],
+  "open_questions": [
+    "Who is the infrastructure team lead or DevOps owner responsible for restoring the staging environment?",
+    "Which finance stakeholder must sign off on the budget, and what is their confirmation timeline?",
+    "What is the specific client deadline for the report Alan must send?",
+    "What is Sarah's current capacity, and can the login bug be fixed before the Friday deployment deadline?"
+  ]
+}

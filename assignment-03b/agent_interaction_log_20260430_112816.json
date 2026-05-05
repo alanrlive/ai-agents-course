@@ -1,0 +1,58 @@
+[
+  {
+    "timestamp": "2026-04-30T09:26:59.144013+00:00",
+    "agent": "note_parser",
+    "input_summary": "Here are the raw meeting notes to parse:\n\n<notes>\nCRM payments meeting\nsometime last week\npeople from both teams were there, some from singapore\n\n- the API thing still isnt working, someone needs to l",
+    "output_preview": "```json\n{\n  \"meeting_metadata\": {\n    \"date\": \"sometime last week\",\n    \"attendees\": [\n      \"people from both teams\",\n      \"some from singapore\"\n    ],\n    \"project\": \"CRM payments\"\n  },\n  \"decisions_made\": [],\n  \"discussion_points\": [\n    \"API thing still isn't working\",\n    \"sandbox keeps droppi",
+    "tokens_used": 897,
+    "revision_round": 0
+  },
+  {
+    "timestamp": "2026-04-30T09:27:11.942249+00:00",
+    "agent": "action_planner",
+    "input_summary": "Here is the structured data extracted from the meeting notes:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"sometime last week\",\n    \"attendees\": [\n      \"people from both teams\",\n      \"so",
+    "output_preview": "```json\n{\n  \"actions\": [\n    {\n      \"action_id\": \"A001\",\n      \"description\": \"Investigate and resolve API integration issue affecting CRM payments project\",\n      \"owner\": \"TBC\",\n      \"deadline\": \"TBC\",\n      \"priority\": \"high\",\n      \"basis_for_owner\": \"Extracted data identifies 'API thing' as a",
+    "tokens_used": 2476,
+    "revision_round": 0
+  },
+  {
+    "timestamp": "2026-04-30T09:27:23.137654+00:00",
+    "agent": "critic",
+    "input_summary": "Here is the original extracted meeting data:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"sometime last week\",\n    \"attendees\": [\n      \"people from both teams\",\n      \"some from singapore",
+    "output_preview": "```json\n{\n  \"approved\": false,\n  \"overall_score\": 6,\n  \"strengths\": [\n    \"All discussion points and blockers from the extracted data are captured as actions \u2014 nothing was silently dropped.\",\n    \"Dependencies are logically sound: A004 correctly depends on A003 and A005; A009 correctly depends on A0",
+    "tokens_used": 3308,
+    "revision_round": 0
+  },
+  {
+    "timestamp": "2026-04-30T09:27:37.806385+00:00",
+    "agent": "action_planner",
+    "input_summary": "Here is the structured data extracted from the meeting notes:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"sometime last week\",\n    \"attendees\": [\n      \"people from both teams\",\n      \"so",
+    "output_preview": "```json\n{\n  \"actions\": [\n    {\n      \"action_id\": \"A001\",\n      \"description\": \"Investigate and resolve API integration issue affecting CRM payments project\",\n      \"owner\": \"TBC\",\n      \"deadline\": \"TBC\",\n      \"priority\": \"high\",\n      \"basis_for_owner\": \"Extracted data indicates 'API thing still ",
+    "tokens_used": 3048,
+    "revision_round": 1
+  },
+  {
+    "timestamp": "2026-04-30T09:27:50.505894+00:00",
+    "agent": "critic",
+    "input_summary": "Here is the original extracted meeting data:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"sometime last week\",\n    \"attendees\": [\n      \"people from both teams\",\n      \"some from singapore",
+    "output_preview": "```json\n{\n  \"approved\": false,\n  \"overall_score\": 4,\n  \"strengths\": [\n    \"All nine actions are grounded in specific discussion points from the extracted data \u2014 nothing was invented.\",\n    \"The Action Planner correctly identified that multiple owners are genuinely unknown and documented the reasonin",
+    "tokens_used": 3772,
+    "revision_round": 1
+  },
+  {
+    "timestamp": "2026-04-30T09:28:05.417211+00:00",
+    "agent": "action_planner",
+    "input_summary": "Here is the structured data extracted from the meeting notes:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"sometime last week\",\n    \"attendees\": [\n      \"people from both teams\",\n      \"so",
+    "output_preview": "```json\n{\n  \"actions\": [\n    {\n      \"action_id\": \"A001\",\n      \"description\": \"Investigate and resolve API integration issue affecting CRM payments project\",\n      \"owner\": \"TBC \u2014 to be assigned by Project Lead by 2024-01-12\",\n      \"deadline\": \"TBC \u2014 set once root cause identified\",\n      \"priorit",
+    "tokens_used": 3284,
+    "revision_round": 2
+  },
+  {
+    "timestamp": "2026-04-30T09:28:15.995510+00:00",
+    "agent": "critic",
+    "input_summary": "Here is the original extracted meeting data:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"sometime last week\",\n    \"attendees\": [\n      \"people from both teams\",\n      \"some from singapore",
+    "output_preview": "```json\n{\n  \"approved\": true,\n  \"overall_score\": 8,\n  \"strengths\": [\n    \"All blockers from the extracted data are captured as high-priority actions with clear ownership assignment rules (TBC with explicit reasons or named owners).\",\n    \"Dependencies are correctly modeled \u2014 A010 (feasibility assess",
+    "tokens_used": 3631,
+    "revision_round": 2
+  }
+]

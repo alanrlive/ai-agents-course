@@ -1,0 +1,40 @@
+{
+  "actions": [
+    {
+      "action_id": "A001",
+      "description": "Deploy system changes to production",
+      "owner": "Tom",
+      "deadline": "TBC",
+      "priority": "medium",
+      "basis_for_owner": "Tom was explicitly identified as the owner of the 'Deploy by Friday' action in the meeting notes.",
+      "basis_for_deadline": "The decision states 'Deploy by Friday' but the specific date is not provided. Tom must confirm the exact Friday date (e.g., 2025-01-17) to convert this to an ISO date. Until confirmed, deadline remains TBC to avoid guessing a critical deployment date.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A002",
+      "description": "Send report to client",
+      "owner": "Alan",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Alan was explicitly identified as the owner of the 'Send report to client' action in the meeting notes.",
+      "basis_for_deadline": "No client delivery expectation or SLA was specified in the meeting notes. Alan must be asked to confirm the actual client deadline and any contractual SLA requirements before a specific date can be assigned.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A003",
+      "description": "Schedule and prepare for next meeting at 9am on Monday",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "medium",
+      "basis_for_owner": "The meeting notes state 'Next meeting: Monday 9am' but do not specify who is responsible for scheduling or preparing the agenda. One of the three attendees (Alan, Sarah, or Tom) must be asked to take ownership of meeting coordination and confirm by end of business today.",
+      "basis_for_deadline": "The meeting is scheduled for Monday 9am, but the specific Monday date is not provided in the meeting notes. Once the owner is assigned, they must confirm the exact date (e.g., 2025-01-20) to set a preparation deadline.",
+      "depends_on": []
+    }
+  ],
+  "open_questions": [
+    "What is the exact Friday date for the deployment deadline in A001? (e.g., 2025-01-17)",
+    "What is the client's required delivery date and SLA for the report in A002?",
+    "Which attendee (Alan, Sarah, or Tom) should own the scheduling and preparation of the Monday 9am meeting in A003?",
+    "What is the exact Monday date for the next meeting in A003? (e.g., 2025-01-20)"
+  ]
+}

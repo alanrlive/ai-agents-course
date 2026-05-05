@@ -1,0 +1,40 @@
+{
+  "actions": [
+    {
+      "action_id": "A001",
+      "description": "Deploy to production",
+      "owner": "Tom",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Tom was explicitly assigned this task in the unresolved items from the meeting",
+      "basis_for_deadline": "Meeting date not specified in source material; Friday deadline cannot be reliably mapped to ISO date without confirmation of meeting week",
+      "depends_on": []
+    },
+    {
+      "action_id": "A002",
+      "description": "Send report to client",
+      "owner": "Alan",
+      "deadline": "TBC",
+      "priority": "medium",
+      "basis_for_owner": "Alan was explicitly assigned this task in the unresolved items from the meeting",
+      "basis_for_deadline": "Client deadline not specified in source material; no specific date provided for report delivery",
+      "depends_on": []
+    },
+    {
+      "action_id": "A003",
+      "description": "Resolve staging environment downtime",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Blocker identified but no owner assigned in source material. Infrastructure/DevOps team lead must be identified before issuance",
+      "basis_for_deadline": "Urgency confirmed by blocker status but specific deadline depends on root cause assessment and team availability",
+      "depends_on": []
+    }
+  ],
+  "open_questions": [
+    "What is the specific date of the meeting to map 'Friday' to an ISO date for A001?",
+    "What is the client's required deadline for the report in A002?",
+    "Who is the Infrastructure/DevOps team lead responsible for resolving the staging environment issue in A003?",
+    "What is the root cause of the staging environment downtime and estimated time to resolution?"
+  ]
+}

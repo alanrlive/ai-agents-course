@@ -1,0 +1,129 @@
+{
+  "actions": [
+    {
+      "action_id": "A001",
+      "description": "Investigate and resolve API integration issue affecting CRM payments project",
+      "owner": "TBC \u2014 to be assigned by Project Lead by 2024-01-12",
+      "deadline": "TBC \u2014 set once root cause identified",
+      "priority": "high",
+      "basis_for_owner": "Blocker requires technical ownership; no specific engineer named in notes. Project Lead must assign.",
+      "basis_for_deadline": "Blocker status demands urgent investigation, but resolution timeline depends on root cause. Deadline to be set after initial diagnosis.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A002",
+      "description": "Diagnose and resolve sandbox environment instability (repeated dropouts)",
+      "owner": "TBC \u2014 to be assigned by Infrastructure/DevOps Lead by 2024-01-12",
+      "deadline": "TBC \u2014 set once diagnostic phase complete",
+      "priority": "high",
+      "basis_for_owner": "Infrastructure/environment issue; no ticket exists and no owner named. DevOps or Infrastructure Lead should own.",
+      "basis_for_deadline": "Blocker affecting testing; resolution timeline depends on root cause diagnosis. Deadline to be set after initial investigation.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A003",
+      "description": "Review and remediate field mapping issues identified by Marco; document which fields are non-functional and required fixes",
+      "owner": "Marco",
+      "deadline": "2024-01-12",
+      "priority": "high",
+      "basis_for_owner": "Marco presented the field mapping analysis and is best positioned to lead remediation.",
+      "basis_for_deadline": "Field mapping is a blocker for pipeline updates. Set to 2 business days from meeting to allow rapid remediation.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A004",
+      "description": "Clarify what James requires from other team members to proceed with pipeline update",
+      "owner": "James",
+      "deadline": "2024-01-10",
+      "priority": "high",
+      "basis_for_owner": "James is the blocker owner; he must articulate his requirements clearly.",
+      "basis_for_deadline": "Blocker preventing pipeline work. Must be clarified within 1 business day to unblock downstream activity.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A005",
+      "description": "Provide James with required input/dependencies to enable pipeline update",
+      "owner": "TBC \u2014 to be assigned by Project Lead by 2024-01-10",
+      "deadline": "2024-01-11",
+      "priority": "high",
+      "basis_for_owner": "Ownership depends on what James requires; Project Lead must identify responsible party after A004 clarifies needs.",
+      "basis_for_deadline": "Blocker; must be resolved within 2 business days to unblock James's pipeline work.",
+      "depends_on": [
+        "A004"
+      ]
+    },
+    {
+      "action_id": "A006",
+      "description": "Chase and resolve overdue security issue",
+      "owner": "TBC \u2014 to be assigned by Security Lead or Project Lead by 2024-01-10",
+      "deadline": "2024-01-11",
+      "priority": "high",
+      "basis_for_owner": "Security issue ownership unclear; Security Lead or Project Lead must assign responsibility immediately.",
+      "basis_for_deadline": "Item is already overdue. Must be escalated and resolved within 1 business day.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A007",
+      "description": "Make decision on handling null fields in CRM payments integration",
+      "owner": "TBC \u2014 to be assigned by Technical Lead or Product Owner by 2024-01-12",
+      "deadline": "2024-01-12",
+      "priority": "high",
+      "basis_for_owner": "Architectural/product decision required; Technical Lead or Product Owner must own the decision.",
+      "basis_for_deadline": "Unresolved blocker affecting field mapping remediation (A003). Decision needed within 2 business days.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A008",
+      "description": "Resolve timezone scheduling conflict affecting team coordination (Singapore and other locations)",
+      "owner": "TBC \u2014 to be assigned by Project Manager by 2024-01-10",
+      "deadline": "2024-01-12",
+      "priority": "medium",
+      "basis_for_owner": "Scheduling and team coordination issue; Project Manager should own resolution or escalation.",
+      "basis_for_deadline": "Affects ongoing team productivity. Must be addressed within 2 business days to establish sustainable meeting/work schedule.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A009",
+      "description": "Clarify whether 'May' refers to a person or the month of May; if a person, confirm their role and availability; if a month, assess feasibility of May go-live target",
+      "owner": "TBC \u2014 to be assigned by Project Lead by 2024-01-10",
+      "deadline": "2024-01-10",
+      "priority": "medium",
+      "basis_for_owner": "Ambiguity in meeting notes requires Project Lead clarification.",
+      "basis_for_deadline": "Unresolved reference affecting timeline planning. Must be clarified immediately (1 business day).",
+      "depends_on": []
+    },
+    {
+      "action_id": "A010",
+      "description": "Assess feasibility of May as go-live target for CRM payments project given current blockers and timeline",
+      "owner": "TBC \u2014 to be assigned by Project Lead by 2024-01-12",
+      "deadline": "2024-01-19",
+      "priority": "high",
+      "basis_for_owner": "Project Lead must own go-live feasibility assessment.",
+      "basis_for_deadline": "Cannot be completed until A001, A002, A006 have confirmed deadlines and A009 clarifies the May reference. Set to 1 week from meeting to allow blockers to be diagnosed.",
+      "depends_on": [
+        "A001",
+        "A002",
+        "A006",
+        "A009"
+      ]
+    },
+    {
+      "action_id": "A011",
+      "description": "Define and assign ownership model going forward for CRM payments project (clarify who owns what between teams)",
+      "owner": "TBC \u2014 to be assigned by Project Lead by 2024-01-12",
+      "deadline": "2024-01-15",
+      "priority": "medium",
+      "basis_for_owner": "Project Lead must facilitate ownership clarification between teams.",
+      "basis_for_deadline": "Unresolved governance issue affecting accountability. Must be resolved within 3 business days to prevent further delays.",
+      "depends_on": []
+    }
+  ],
+  "open_questions": [
+    "Does 'May' in the unresolved items refer to a person named May or the month of May as a go-live target?",
+    "What specific input or dependency does James need from other team members to proceed with the pipeline update?",
+    "Who owns the overdue security issue, and what is its current status?",
+    "What is the nature of the null fields problem, and what decision framework should guide the resolution (data validation, mapping, schema change)?",
+    "Can the timezone scheduling conflict be resolved through asynchronous work patterns, or does it require synchronous meeting time across Singapore and other locations?",
+    "Is the May go-live target still realistic given the current blockers (API, sandbox, security, field mapping)?"
+  ]
+}

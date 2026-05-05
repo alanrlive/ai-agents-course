@@ -1,0 +1,64 @@
+{
+  "actions": [
+    {
+      "action_id": "A001",
+      "description": "Deploy to production using v2 API",
+      "owner": "Tom",
+      "deadline": "2025-01-10",
+      "priority": "high",
+      "basis_for_owner": "Tom was explicitly mentioned in context of 'Deploy by Friday'",
+      "basis_for_deadline": "Friday deployment deadline inferred from meeting notes",
+      "depends_on": [
+        "A003",
+        "A004"
+      ]
+    },
+    {
+      "action_id": "A002",
+      "description": "Send report to client",
+      "owner": "Alan",
+      "deadline": "TBC",
+      "priority": "medium",
+      "basis_for_owner": "Alan was explicitly mentioned in context of 'Send report to client'",
+      "basis_for_deadline": "TBC \u2014 requires Alan to confirm client deadline and report scope before a deadline can be set.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A003",
+      "description": "Fix login bug",
+      "owner": "Sarah",
+      "deadline": "2025-01-10",
+      "priority": "high",
+      "basis_for_owner": "Sarah was explicitly mentioned in context of 'Fix login bug'",
+      "basis_for_deadline": "Must be completed before Friday deployment (2025-01-10) as it is a blocker for A001.",
+      "depends_on": [
+        "A004"
+      ]
+    },
+    {
+      "action_id": "A004",
+      "description": "Restore staging environment",
+      "owner": "TBC",
+      "deadline": "2025-01-09",
+      "priority": "high",
+      "basis_for_owner": "Staging environment restoration requires infrastructure team involvement; specific owner not identified in meeting notes",
+      "basis_for_deadline": "Critical blocker; must be restored by Thursday 2025-01-09 to allow testing before Friday deployment.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A005",
+      "description": "Confirm budget sign-off",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "medium",
+      "basis_for_owner": "Budget sign-off authority not identified in meeting notes; requires clarification on stakeholder responsible for approval",
+      "basis_for_deadline": "TBC \u2014 requires clarification on budget cycle timeline and stakeholder approval process.",
+      "depends_on": []
+    }
+  ],
+  "open_questions": [
+    "Who is responsible for restoring the staging environment and what is their estimated restoration time?",
+    "What is the client's required deadline for Alan's report and what is the scope of the report?",
+    "Who holds budget sign-off authority and what is the approval timeline?"
+  ]
+}
