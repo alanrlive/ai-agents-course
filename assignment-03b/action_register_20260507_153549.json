@@ -1,0 +1,39 @@
+{
+  "actions": [
+    {
+      "action_id": "A001",
+      "description": "Deploy to production",
+      "owner": "Tom",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Explicitly assigned to Tom in unresolved items",
+      "basis_for_deadline": "Stated as 'Friday' in meeting notes, but meeting date not provided; confirm calendar date with Tom to establish exact deadline (e.g., 2025-01-10 if this Friday)",
+      "depends_on": []
+    },
+    {
+      "action_id": "A002",
+      "description": "Send report to client",
+      "owner": "Alan",
+      "deadline": "TBC",
+      "priority": "medium",
+      "basis_for_owner": "Explicitly assigned to Alan in unresolved items",
+      "basis_for_deadline": "No deadline stated in meeting notes; escalate to team lead to confirm client SLA and delivery expectation",
+      "depends_on": []
+    },
+    {
+      "action_id": "A003",
+      "description": "Resolve staging environment downtime",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "No owner identified among attendees (Alan, Sarah, Tom). Blocker requires immediate escalation to team lead or DevOps lead to assign ownership and establish resolution timeline",
+      "basis_for_deadline": "Blocker status indicates urgency, but no specific deadline provided; owner assignment will determine timeline",
+      "depends_on": []
+    }
+  ],
+  "open_questions": [
+    "What is the exact calendar date for 'Friday' mentioned for A001 deployment deadline?",
+    "What is the client SLA or expected delivery date for the report in A002?",
+    "Who owns the staging environment issue and what is the target resolution time for A003?"
+  ]
+}

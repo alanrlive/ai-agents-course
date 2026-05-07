@@ -1,0 +1,66 @@
+[
+  {
+    "timestamp": "2026-05-07T13:10:00.202373+00:00",
+    "agent": "vision_agent",
+    "input_summary": "image:whiteboard_sample.jpg media_type:image/jpeg",
+    "output_preview": "```json\n{\n  \"document_type\": \"digital\",\n  \"extracted_text\": \"Meeting Notes \u2013 Sprint Review\\n\\nAttendees: Alan, Sarah, Tom\\n\\nAction: Deploy by Friday\\n  Owner: Tom\\n\\nAction: Send report to client\\n  Owner: Alan\\n\\nBlocker: staging env down\\n\\nDecision: use v2 API\\n\\nNext meeting: Monday 9am\",\n  \"co",
+    "tokens_used": 1483,
+    "revision_round": 0
+  },
+  {
+    "timestamp": "2026-05-07T13:10:07.239220+00:00",
+    "agent": "note_parser",
+    "input_summary": "Here are the raw meeting notes to parse:\n\n<notes>\nMeeting Notes \u2013 Sprint Review\n\nAttendees: Alan, Sarah, Tom\n\nAction: Deploy by Friday\n  Owner: Tom\n\nAction: Send report to client\n  Owner: Alan\n\nBlocke",
+    "output_preview": "```json\n{\n  \"meeting_metadata\": {\n    \"date\": \"not specified\",\n    \"attendees\": [\n      \"Alan\",\n      \"Sarah\",\n      \"Tom\"\n    ],\n    \"project\": \"Sprint Review\"\n  },\n  \"decisions_made\": [\n    \"use v2 API\"\n  ],\n  \"discussion_points\": [\n    \"Next meeting: Monday 9am\"\n  ],\n  \"blockers\": [\n    \"staging ",
+    "tokens_used": 712,
+    "revision_round": 0
+  },
+  {
+    "timestamp": "2026-05-07T13:10:10.722580+00:00",
+    "agent": "action_planner",
+    "input_summary": "Here is the structured data extracted from the meeting notes:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"not specified\",\n    \"attendees\": [\n      \"Alan\",\n      \"Sarah\",\n      \"Tom\"\n    ]",
+    "output_preview": "```json\n{\n  \"actions\": [\n    {\n      \"action_id\": \"A001\",\n      \"description\": \"Deploy application using v2 API\",\n      \"owner\": \"Tom\",\n      \"deadline\": \"2025-01-10\",\n      \"priority\": \"high\",\n      \"basis_for_owner\": \"Explicitly assigned to Tom in unresolved_items\",\n      \"basis_for_deadline\": \"St",
+    "tokens_used": 1207,
+    "revision_round": 0
+  },
+  {
+    "timestamp": "2026-05-07T13:10:17.195950+00:00",
+    "agent": "critic",
+    "input_summary": "Here is the original extracted meeting data:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"not specified\",\n    \"attendees\": [\n      \"Alan\",\n      \"Sarah\",\n      \"Tom\"\n    ],\n    \"project\": ",
+    "output_preview": "```json\n{\n  \"approved\": false,\n  \"overall_score\": 5,\n  \"strengths\": [\n    \"All three unresolved items from the original notes are captured as actions\",\n    \"Owner assignments for A001 and A002 are explicit and well-justified\",\n    \"Dependencies between actions are logically sound (A003 must resolve ",
+    "tokens_used": 1718,
+    "revision_round": 0
+  },
+  {
+    "timestamp": "2026-05-07T13:10:22.607512+00:00",
+    "agent": "action_planner",
+    "input_summary": "Here is the structured data extracted from the meeting notes:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"not specified\",\n    \"attendees\": [\n      \"Alan\",\n      \"Sarah\",\n      \"Tom\"\n    ]",
+    "output_preview": "```json\n{\n  \"actions\": [\n    {\n      \"action_id\": \"A001\",\n      \"description\": \"Deploy application to production\",\n      \"owner\": \"Tom\",\n      \"deadline\": \"2025-01-10\",\n      \"priority\": \"high\",\n      \"basis_for_owner\": \"Tom was explicitly assigned this task in the unresolved items from the Sprint R",
+    "tokens_used": 1668,
+    "revision_round": 1
+  },
+  {
+    "timestamp": "2026-05-07T13:10:30.584513+00:00",
+    "agent": "critic",
+    "input_summary": "Here is the original extracted meeting data:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"not specified\",\n    \"attendees\": [\n      \"Alan\",\n      \"Sarah\",\n      \"Tom\"\n    ],\n    \"project\": ",
+    "output_preview": "```json\n{\n  \"approved\": false,\n  \"overall_score\": 6,\n  \"strengths\": [\n    \"All four actions are grounded in the extracted meeting data with clear basis statements\",\n    \"Dependencies are logically sound: A003 must resolve before A001 (deployment), and A001 before A002 (report)\",\n    \"Priority levels",
+    "tokens_used": 2153,
+    "revision_round": 1
+  },
+  {
+    "timestamp": "2026-05-07T13:10:36.796773+00:00",
+    "agent": "action_planner",
+    "input_summary": "Here is the structured data extracted from the meeting notes:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"not specified\",\n    \"attendees\": [\n      \"Alan\",\n      \"Sarah\",\n      \"Tom\"\n    ]",
+    "output_preview": "```json\n{\n  \"actions\": [\n    {\n      \"action_id\": \"A001\",\n      \"description\": \"Restore staging environment to operational status\",\n      \"owner\": \"TBC\",\n      \"deadline\": \"TBC\",\n      \"priority\": \"high\",\n      \"basis_for_owner\": \"No infrastructure lead identified in meeting notes; requires escalati",
+    "tokens_used": 1803,
+    "revision_round": 2
+  },
+  {
+    "timestamp": "2026-05-07T13:10:47.900909+00:00",
+    "agent": "critic",
+    "input_summary": "Here is the original extracted meeting data:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"not specified\",\n    \"attendees\": [\n      \"Alan\",\n      \"Sarah\",\n      \"Tom\"\n    ],\n    \"project\": ",
+    "output_preview": "```json\n{\n  \"approved\": false,\n  \"overall_score\": 5,\n  \"strengths\": [\n    \"Correctly identified the staging environment blocker and escalated it with explicit reasoning for TBC status\",\n    \"Properly assigned owners for A002 and A003 based on explicit meeting notes\",\n    \"Recognized dependency chain",
+    "tokens_used": 2276,
+    "revision_round": 2
+  }
+]

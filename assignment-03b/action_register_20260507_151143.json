@@ -1,0 +1,51 @@
+{
+  "actions": [
+    {
+      "action_id": "A001",
+      "description": "Deploy to production",
+      "owner": "Tom",
+      "deadline": "2025-01-10",
+      "priority": "high",
+      "basis_for_owner": "Tom was explicitly assigned this task in the meeting notes",
+      "basis_for_deadline": "Meeting notes state 'by Friday'; assuming the Friday of the current week (2025-01-10). If the meeting occurred after Friday or in a different week, this should be adjusted to the next Friday.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A002",
+      "description": "Send report to client",
+      "owner": "Alan",
+      "deadline": "TBC",
+      "priority": "medium",
+      "basis_for_owner": "Alan was explicitly assigned this task in the meeting notes",
+      "basis_for_deadline": "No deadline stated in meeting notes; client reports typically have time-sensitive expectations. Recommend confirming with Alan whether this is end-of-week (2025-01-10), end-of-sprint, or another timeline. Defaulting to TBC pending clarification.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A003",
+      "description": "Resolve staging environment outage",
+      "owner": "Sarah",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Sarah is the attendee present; assigned as responsible for infrastructure escalation. If Sarah is not the infrastructure owner, escalate within 24 hours to identify the correct owner.",
+      "basis_for_deadline": "Blocker with no stated resolution timeline; deadline depends on infrastructure team's assessment and fix complexity. Set to TBC pending Sarah's escalation and status update.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A004",
+      "description": "Implement v2 API decision and migration plan",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Decision made in meeting but no owner assigned in notes; requires clarification on which team or person owns API migration and implementation",
+      "basis_for_deadline": "No timeline provided; implementation deadline depends on deployment schedule (A001) and staging environment resolution (A003)",
+      "depends_on": [
+        "A001"
+      ]
+    }
+  ],
+  "open_questions": [
+    "Who owns the v2 API implementation and migration plan?",
+    "What is the deadline for sending the client report to Alan, and what format/content is expected?",
+    "Is Sarah the correct infrastructure owner for the staging environment outage, or should this be escalated to a specific Infrastructure Lead?"
+  ]
+}

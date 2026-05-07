@@ -1,6 +1,6 @@
 # Assignment 03B — Meeting Notes Processor with Vision Agent
 
-Extends the Assignment 03A multi-agent pipeline with a Vision Agent at the front. The pipeline now accepts an image file (whiteboard photo, handwritten notes, or digital screenshot) and processes it all the way through to a structured, critic-approved action register.
+Extends the Assignment 03A multi-agent pipeline with a Vision Agent at the front. The pipeline accepts an image file (whiteboard photo, handwritten notes, or digital screenshot) and processes it through to a structured, critic-approved action register. All pipeline stages are traced in Langfuse.
 
 ## How it works
 
@@ -24,9 +24,20 @@ Four agents collaborate in sequence:
 
 ```bash
 pip install -r requirements.txt
-# Add your Anthropic API key to .env
-# ANTHROPIC_API_KEY=sk-ant-...
 ```
+
+Create a `.env` file in the project root:
+
+```
+ANTHROPIC_API_KEY=sk-ant-...
+
+# Optional — omit to run without tracing
+LANGFUSE_PUBLIC_KEY=your_public_key_here
+LANGFUSE_SECRET_KEY=your_secret_key_here
+LANGFUSE_HOST=https://cloud.langfuse.com
+```
+
+Langfuse tracing is optional. If the keys are absent the pipeline runs normally and prints `Langfuse tracing : SKIPPED` at the end.
 
 ## Run
 
@@ -36,35 +47,41 @@ python main.py --image path/to/your_image.jpg
 
 Supported image formats: `jpg`, `jpeg`, `png`.
 
+## Observability
+
+Each pipeline run creates a single Langfuse trace (`meeting-notes-pipeline`) with a child span per agent stage:
+
+| Span | Input | Output |
+|---|---|---|
+| `vision_agent` | image path | document_type, confidence, extracted_text_length, rejected |
+| `note_parser` | extracted text | parsed notes payload |
+| `action_planner` | parsed notes | action register payload (one span per revision round) |
+| `critic` | action register | score, issues, approved (one span per revision round) |
+
+The root span records the final action register as output and total token count as metadata.
+
 ## Output
 
-A structured action register printed to stdout, approved by the Critic agent.
-
-Output files are written to the working directory with datetime stamps:
+A structured action register printed to stdout. Output files are written to the working directory with datetime stamps:
 
 - `action_register_YYYYMMDD_HHMMSS.json` — the final action register
-- `agent_interaction_log_YYYYMMDD_HHMMSS.json` — full interaction log with per-agent token counts
+- `agent_interaction_log_YYYYMMDD_HHMMSS.json` — per-agent token counts and response previews
 
 If the Critic fails to parse a response, a `critic_debug_YYYYMMDD_HHMMSS.txt` file is written with the raw LLM output.
 
 ## Testing
 
-Sample images are generated programmatically using Pillow:
+Generate sample images and run the integration tests:
 
 ```bash
-# Generate the three test images
-python test_images/create_samples.py
-
-# Run the integration tests (makes real API calls)
-python test_cases.py
+python test_images/create_samples.py   # one-time setup
+python test_cases.py                   # makes real API calls
 ```
-
-Three tests are included:
 
 | Test | Input | Pass criterion |
 |---|---|---|
 | `test_happy_path` | `whiteboard_sample.jpg` | Not rejected, text extracted, full pipeline completes |
-| `test_alternate_path` | `handwritten_sample.jpg` | Not rejected, confidence logged, pipeline completes with action register |
+| `test_alternate_path` | `handwritten_sample.jpg` | Not rejected, confidence logged, pipeline completes |
 | `test_edge_case` | `blurry_sample.jpg` | Rejected with reason, Note Parser never called |
 
 ## Project structure
@@ -76,12 +93,13 @@ assignment-03b/
 ├── agents.py               # Note Parser, Action Planner, Critic agents
 ├── prompts.py              # System prompts for all four agents
 ├── schema.py               # Message envelope schema and VisionOutput dataclass
+├── langfuse_client.py      # Langfuse client initialisation (graceful no-op if keys absent)
 ├── test_cases.py           # Integration tests
 ├── test_images/
 │   ├── create_samples.py   # Generates the three sample test images
 │   ├── whiteboard_sample.jpg
 │   ├── handwritten_sample.jpg
 │   └── blurry_sample.jpg
-├── requirements.txt        # anthropic, python-dotenv, json-repair, Pillow
-└── .env                    # ANTHROPIC_API_KEY (not committed)
+├── requirements.txt        # anthropic, python-dotenv, json-repair, Pillow, langfuse
+└── .env                    # API keys (not committed)
 ```

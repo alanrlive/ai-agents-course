@@ -1,0 +1,65 @@
+{
+  "actions": [
+    {
+      "action_id": "A001",
+      "description": "Restore staging environment to operational status",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "No infrastructure lead identified in meeting notes; requires escalation to determine responsible party",
+      "basis_for_deadline": "TBC \u2014 critical blocker with no stated resolution timeline; deadline will be set upon escalation to infrastructure team",
+      "depends_on": []
+    },
+    {
+      "action_id": "A002",
+      "description": "Deploy changes to production",
+      "owner": "Tom",
+      "deadline": "2025-01-10",
+      "priority": "high",
+      "basis_for_owner": "Explicitly assigned to Tom in unresolved items",
+      "basis_for_deadline": "Agreed target of Friday; set as 2025-01-10 assuming meeting occurred early in week of 2025-01-06",
+      "depends_on": [
+        "A001"
+      ]
+    },
+    {
+      "action_id": "A003",
+      "description": "Send report to client",
+      "owner": "Alan",
+      "deadline": "2025-01-13",
+      "priority": "high",
+      "basis_for_owner": "Explicitly assigned to Alan in unresolved items",
+      "basis_for_deadline": "Set for Monday 2025-01-13 to align with next scheduled meeting and allow time for deployment confirmation; report should be ready before Monday 9am meeting",
+      "depends_on": [
+        "A002"
+      ]
+    },
+    {
+      "action_id": "A004",
+      "description": "Confirm deployment completion and readiness for client report",
+      "owner": "Tom",
+      "deadline": "2025-01-12",
+      "priority": "high",
+      "basis_for_owner": "Tom owns the deployment and must confirm status before Alan finalizes client report",
+      "basis_for_deadline": "Set for Sunday 2025-01-12 (day before Monday meeting) to allow Alan time to incorporate deployment confirmation into final report",
+      "depends_on": [
+        "A002"
+      ]
+    },
+    {
+      "action_id": "A005",
+      "description": "Schedule and confirm next sprint review meeting",
+      "owner": "Sarah",
+      "deadline": "2025-01-09",
+      "priority": "low",
+      "basis_for_owner": "No explicit owner stated; Sarah is attendee with no other assigned actions and meeting coordination typically falls to team lead or coordinator",
+      "basis_for_deadline": "Meeting is scheduled for Monday 9am; confirmation should occur by end of business Thursday to allow attendees to prepare",
+      "depends_on": []
+    }
+  ],
+  "open_questions": [
+    "Who is the responsible infrastructure lead for restoring the staging environment?",
+    "What is the acceptable resolution timeline for the staging environment outage?",
+    "Does Alan require any additional information from Tom before finalizing the client report, or can it be completed independently?"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "actions": [
+    {
+      "action_id": "A001",
+      "description": "Deploy changes to production by Friday",
+      "owner": "Tom",
+      "deadline": "2025-01-10",
+      "priority": "high",
+      "basis_for_owner": "Tom was explicitly named in meeting notes with context 'Deploy by Friday', indicating direct ownership of deployment task",
+      "basis_for_deadline": "Meeting notes specify 'by Friday'; assuming the Friday of the current week (2025-01-10). Tom should confirm if a different Friday is intended",
+      "depends_on": []
+    },
+    {
+      "action_id": "A002",
+      "description": "Send report to client",
+      "owner": "Alan",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Alan was explicitly named in meeting notes with context 'Send report to client', indicating direct ownership of client communication",
+      "basis_for_deadline": "Client deadline not specified in meeting notes. Alan must confirm actual delivery date with client and update this action",
+      "depends_on": []
+    },
+    {
+      "action_id": "A003",
+      "description": "Fix login bug",
+      "owner": "Sarah",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Sarah was explicitly named in meeting notes with context 'Fix login bug', indicating direct ownership of this defect",
+      "basis_for_deadline": "No deadline specified in meeting notes. Priority is high due to login functionality impact; deadline should be confirmed based on sprint planning and severity assessment",
+      "depends_on": []
+    },
+    {
+      "action_id": "A004",
+      "description": "Restore staging environment to operational status",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Staging environment outage is a blocker but no specific owner identified in meeting notes. Engineering Manager must confirm actual DevOps lead or infrastructure owner responsible for environment restoration before this action is issued",
+      "basis_for_deadline": "Blocker status indicates urgency, but no specific deadline provided. Owner must assess restoration timeline once assigned",
+      "depends_on": []
+    },
+    {
+      "action_id": "A005",
+      "description": "Confirm budget sign-off for project",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "medium",
+      "basis_for_owner": "Budget stakeholder(s) not identified in meeting attendees. Must confirm who owns budget approval (product manager, finance, or other) before assigning",
+      "basis_for_deadline": "No deadline specified in meeting notes. Once owner is identified, they should provide target approval date based on project timeline and financial process requirements",
+      "depends_on": []
+    }
+  ],
+  "open_questions": [
+    "Who is the actual DevOps lead or infrastructure owner responsible for restoring the staging environment?",
+    "What is the client's required delivery date for the report Alan is sending?",
+    "Who owns budget sign-off approval (product manager, finance director, or other stakeholder)?"
+  ]
+}

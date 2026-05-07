@@ -1,0 +1,52 @@
+{
+  "actions": [
+    {
+      "action_id": "A001",
+      "description": "Deploy to production by Friday",
+      "owner": "Tom",
+      "deadline": "2025-01-10",
+      "priority": "high",
+      "basis_for_owner": "Explicitly assigned to Tom in unresolved_items",
+      "basis_for_deadline": "Stated as 'by Friday' in unresolved_items; interpreted as the Friday of the current week",
+      "depends_on": [
+        "A003"
+      ]
+    },
+    {
+      "action_id": "A002",
+      "description": "Send report to client",
+      "owner": "Alan",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Explicitly assigned to Alan in unresolved_items",
+      "basis_for_deadline": "No specific deadline provided in source material; client deliverables typically have firm deadlines that must be confirmed with Alan to avoid missed commitments",
+      "depends_on": []
+    },
+    {
+      "action_id": "A003",
+      "description": "Resolve staging environment outage",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Blocker identified but no owner assigned; infrastructure/DevOps team ownership is typical but not confirmed in meeting notes",
+      "basis_for_deadline": "Blocker must be resolved before production deployment (A001) can safely proceed; urgency is high but specific resolution time unknown",
+      "depends_on": []
+    },
+    {
+      "action_id": "A004",
+      "description": "Confirm attendance and send meeting agenda for Monday 9am review meeting",
+      "owner": "TBC",
+      "deadline": "2025-01-09",
+      "priority": "low",
+      "basis_for_owner": "Meeting organizer not identified in source material; typically a project manager or scrum master role",
+      "basis_for_deadline": "Monday 9am meeting requires confirmation by Thursday 2025-01-09 to allow attendees (Alan, Sarah, Tom) adequate preparation time",
+      "depends_on": []
+    }
+  ],
+  "open_questions": [
+    "Does the Friday deployment deadline (A001) depend on the staging environment being restored, or can deployment proceed independently?",
+    "What is the actual deadline for Alan's client report (A002)? Is it the same Friday as the deployment, or a different date?",
+    "Who owns resolution of the staging environment outage (A003)? Is this a DevOps, infrastructure, or platform team responsibility?",
+    "Who is responsible for organizing and confirming the Monday 9am meeting (A004)?"
+  ]
+}

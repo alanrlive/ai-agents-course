@@ -1,0 +1,61 @@
+{
+  "actions": [
+    {
+      "action_id": "A001",
+      "description": "Deploy changes using v2 API to production",
+      "owner": "Tom",
+      "deadline": "2025-01-10",
+      "priority": "high",
+      "basis_for_owner": "Tom was explicitly mentioned in context 'Deploy by Friday'",
+      "basis_for_deadline": "Inferred as end of week (Friday) from 'Deploy by Friday' instruction; assuming current week ends 2025-01-10",
+      "depends_on": []
+    },
+    {
+      "action_id": "A002",
+      "description": "Send sprint review report to client",
+      "owner": "Alan",
+      "deadline": "2025-01-10",
+      "priority": "medium",
+      "basis_for_owner": "Alan was explicitly mentioned in context 'Send report to client'",
+      "basis_for_deadline": "End of week assumed as standard client reporting cadence; set to 2025-01-10 to align with sprint close",
+      "depends_on": []
+    },
+    {
+      "action_id": "A003",
+      "description": "Fix login bug",
+      "owner": "Sarah",
+      "deadline": "2025-01-10",
+      "priority": "high",
+      "basis_for_owner": "Sarah was explicitly mentioned in context 'Fix login bug'",
+      "basis_for_deadline": "Set to end of week (2025-01-10) as a critical bug affecting user access should be resolved before sprint close",
+      "depends_on": []
+    },
+    {
+      "action_id": "A004",
+      "description": "Restore staging environment to operational status",
+      "owner": "TBC",
+      "deadline": "2025-01-09",
+      "priority": "high",
+      "basis_for_owner": "Staging environment outage requires infrastructure/DevOps ownership; no specific person identified in meeting notes",
+      "basis_for_deadline": "Set to 2025-01-09 (day before Friday deployment) as this is a critical blocker preventing deployment testing and validation",
+      "depends_on": []
+    },
+    {
+      "action_id": "A005",
+      "description": "Obtain and confirm budget sign-off from stakeholders",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "medium",
+      "basis_for_owner": "Budget approval typically requires finance or project sponsor sign-off; no owner identified in meeting notes",
+      "basis_for_deadline": "Deadline cannot be determined without knowing stakeholder availability and approval process timeline; depends on organizational budget cycle",
+      "basis_for_priority": "Budget sign-off is medium priority as it is unresolved but does not appear to be blocking immediate sprint delivery or critical path items",
+      "depends_on": []
+    }
+  ],
+  "open_questions": [
+    "Who owns infrastructure/DevOps and should be assigned to restore the staging environment (A004)?",
+    "Who is the budget sign-off authority and what is their approval timeline (A005)?",
+    "What is the severity and discovery time of the staging environment outage to confirm 2025-01-09 deadline is achievable?",
+    "Does the login bug fix (A003) have any functional dependency on v2 API deployment (A001), or are these independent work streams?"
+  ]
+}

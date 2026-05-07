@@ -1,0 +1,62 @@
+{
+  "actions": [
+    {
+      "action_id": "A001",
+      "description": "Deploy application by Friday",
+      "owner": "Tom",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Tom was explicitly assigned this task in the unresolved items",
+      "basis_for_deadline": "Deadline stated as Friday but contingent on staging environment restoration (A003); confirm with Tom once A003 timeline is established",
+      "depends_on": [
+        "A003"
+      ]
+    },
+    {
+      "action_id": "A002",
+      "description": "Send report to client",
+      "owner": "Alan",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Alan was explicitly assigned this task in the unresolved items",
+      "basis_for_deadline": "No deadline specified in meeting notes; deadline is blocking priority assessment\u2014confirm with Alan",
+      "depends_on": []
+    },
+    {
+      "action_id": "A003",
+      "description": "Restore staging environment to operational status",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Staging environment outage is a blocker but no owner was identified in the meeting notes",
+      "basis_for_deadline": "No timeline provided; this is a critical blocker affecting A001 deployment",
+      "depends_on": []
+    },
+    {
+      "action_id": "A004",
+      "description": "Schedule and prepare for next meeting",
+      "owner": "TBC",
+      "deadline": "2025-01-13",
+      "priority": "medium",
+      "basis_for_owner": "Meeting organizer not specified; typically handled by project lead or meeting coordinator",
+      "basis_for_deadline": "Next meeting confirmed for Monday 9am; assuming the Monday following the meeting date",
+      "depends_on": []
+    },
+    {
+      "action_id": "A005",
+      "description": "Implement and communicate v2 API adoption",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "medium",
+      "basis_for_owner": "Decision to use v2 API was made but implementation owner is unclear from meeting notes",
+      "basis_for_deadline": "No rollout timeline specified; depends on clarification of ownership and implementation scope",
+      "depends_on": []
+    }
+  ],
+  "open_questions": [
+    "Who is responsible for implementing the v2 API decision and what is the rollout timeline?",
+    "What is the deadline for Alan to send the report to the client?",
+    "Who owns the staging environment restoration and what is the estimated time to resolution?",
+    "Who is responsible for organizing and preparing the Monday 9am meeting?"
+  ]
+}

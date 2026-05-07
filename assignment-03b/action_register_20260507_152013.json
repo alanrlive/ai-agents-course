@@ -1,0 +1,52 @@
+{
+  "actions": [
+    {
+      "action_id": "A001",
+      "description": "Deploy to production",
+      "owner": "Tom",
+      "deadline": "2025-01-10",
+      "priority": "high",
+      "basis_for_owner": "Tom was explicitly assigned this task in the unresolved items from the Sprint Review meeting.",
+      "basis_for_deadline": "Deadline stated as 'by Friday' in unresolved items. Assuming the meeting occurred in the week of January 6\u201310, 2025, the nearest Friday is 2025-01-10. If the meeting date was different, this deadline requires verification.",
+      "depends_on": [
+        "A003"
+      ]
+    },
+    {
+      "action_id": "A002",
+      "description": "Send report to client",
+      "owner": "Alan",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Alan was explicitly assigned this task in the unresolved items from the Sprint Review meeting.",
+      "basis_for_deadline": "No deadline was discussed in the meeting notes. Client report deadlines are typically time-sensitive deliverables and require immediate confirmation. Alan or the project lead must clarify the expected delivery date.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A003",
+      "description": "Resolve staging environment outage",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "No infrastructure, DevOps, or platform engineer was identified among the attendees (Alan, Sarah, Tom). Staging environment ownership and the responsible team member must be clarified with the team lead or infrastructure owner.",
+      "basis_for_deadline": "This is a blocker preventing deployment and testing activities. Resolution is urgent, but no specific deadline was stated. The owner must assess impact and provide an estimated resolution time once assigned.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A004",
+      "description": "Schedule next Sprint Review meeting",
+      "owner": "TBC",
+      "deadline": "2025-01-13",
+      "priority": "low",
+      "basis_for_owner": "Meeting organizer or Scrum Master typically owns scheduling. No explicit owner identified in attendees; responsibility should be assigned to the meeting facilitator or project coordinator.",
+      "basis_for_deadline": "Next meeting was stated as 'Monday 9am' in discussion points. Assuming the current meeting occurred in the week of January 6\u201310, 2025, the next Monday is 2025-01-13.",
+      "depends_on": []
+    }
+  ],
+  "open_questions": [
+    "Who owns the staging environment infrastructure, and what is the estimated time to resolve the outage?",
+    "What is the specific deadline for sending the client report, and are there any dependencies or prerequisites Alan needs before proceeding?",
+    "On what date did this Sprint Review meeting occur, to confirm that 2025-01-10 is the correct Friday deadline for Tom's deployment?",
+    "Who should be assigned responsibility for scheduling and facilitating the next Monday 9am meeting?"
+  ]
+}

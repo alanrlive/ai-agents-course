@@ -1,0 +1,60 @@
+{
+  "actions": [
+    {
+      "action_id": "A001",
+      "description": "Deploy changes to production by Friday",
+      "owner": "Tom",
+      "deadline": "2025-01-10",
+      "priority": "high",
+      "basis_for_owner": "Tom was explicitly named in meeting notes with context 'Deploy by Friday'",
+      "basis_for_deadline": "Explicit deadline of Friday mentioned in source material; interpreted as end of current week",
+      "depends_on": []
+    },
+    {
+      "action_id": "A002",
+      "description": "Send report to client",
+      "owner": "Alan",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Alan was explicitly named in meeting notes with context 'Send report to client'",
+      "basis_for_deadline": "No explicit deadline provided in source material. Requires confirmation with Alan and client stakeholder on whether report is pre-deployment or post-deployment communication, and what the required delivery window is.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A003",
+      "description": "Fix login bug",
+      "owner": "Sarah",
+      "deadline": "2025-01-10",
+      "priority": "high",
+      "basis_for_owner": "Sarah was explicitly named in meeting notes with context 'Fix login bug'",
+      "basis_for_deadline": "Inferred as blocking the Friday deployment deadline; must be resolved before A001 can proceed",
+      "depends_on": []
+    },
+    {
+      "action_id": "A004",
+      "description": "Restore staging environment to operational status",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Staging environment outage is a blocker but no owner was identified in meeting notes. Requires clarification on whether this is infrastructure/DevOps responsibility or another team.",
+      "basis_for_deadline": "Critical blocker with no timeline provided. Deadline depends on root cause and owner assignment.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A005",
+      "description": "Obtain budget sign-off",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "medium",
+      "basis_for_owner": "Budget sign-off authority not identified in meeting notes. Requires clarification on which stakeholder or department holds approval authority.",
+      "basis_for_deadline": "Budget sign-off authority and approval timeline not confirmed in meeting notes. Requires clarification on whether this is a deployment gate and what the stakeholder SLA is.",
+      "depends_on": []
+    }
+  ],
+  "open_questions": [
+    "Who owns the staging environment outage (A004) and what is the estimated time to restore?",
+    "Is budget sign-off (A005) a hard gate for the Friday deployment, or a separate process that can proceed in parallel?",
+    "Who has authority to approve budget sign-off (A005) and what is their typical approval SLA?",
+    "Should the client report (A002) be delivered before or after the Friday deployment, and what is the required delivery window?"
+  ]
+}

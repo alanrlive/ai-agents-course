@@ -1,0 +1,74 @@
+[
+  {
+    "timestamp": "2026-05-07T13:11:01.147577+00:00",
+    "agent": "vision_agent",
+    "input_summary": "image:whiteboard_sample.jpg media_type:image/jpeg",
+    "output_preview": "```json\n{\n  \"document_type\": \"digital\",\n  \"extracted_text\": \"Meeting Notes \u2013 Sprint Review\\n\\nAttendees: Alan, Sarah, Tom\\n\\nAction: Deploy by Friday\\n  Owner: Tom\\n\\nAction: Send report to client\\n  Owner: Alan\\n\\nBlocker: staging env down\\n\\nDecision: use v2 API\\n\\nNext meeting: Monday 9am\",\n  \"co",
+    "tokens_used": 1483,
+    "revision_round": 0
+  },
+  {
+    "timestamp": "2026-05-07T13:11:04.296195+00:00",
+    "agent": "vision_agent",
+    "input_summary": "image:whiteboard_sample.jpg media_type:image/jpeg",
+    "output_preview": "```json\n{\n  \"document_type\": \"digital\",\n  \"extracted_text\": \"Meeting Notes \u2013 Sprint Review\\n\\nAttendees: Alan, Sarah, Tom\\n\\nAction: Deploy by Friday\\n  Owner: Tom\\n\\nAction: Send report to client\\n  Owner: Alan\\n\\nBlocker: staging env down\\n\\nDecision: use v2 API\\n\\nNext meeting: Monday 9am\",\n  \"co",
+    "tokens_used": 1485,
+    "revision_round": 0
+  },
+  {
+    "timestamp": "2026-05-07T13:11:06.049268+00:00",
+    "agent": "note_parser",
+    "input_summary": "Here are the raw meeting notes to parse:\n\n<notes>\nMeeting Notes \u2013 Sprint Review\n\nAttendees: Alan, Sarah, Tom\n\nAction: Deploy by Friday\n  Owner: Tom\n\nAction: Send report to client\n  Owner: Alan\n\nBlocke",
+    "output_preview": "```json\n{\n  \"meeting_metadata\": {\n    \"date\": \"not specified\",\n    \"attendees\": [\n      \"Alan\",\n      \"Sarah\",\n      \"Tom\"\n    ],\n    \"project\": \"Sprint Review\"\n  },\n  \"decisions_made\": [\n    \"use v2 API\"\n  ],\n  \"discussion_points\": [\n    \"Next meeting: Monday 9am\"\n  ],\n  \"blockers\": [\n    \"staging ",
+    "tokens_used": 712,
+    "revision_round": 0
+  },
+  {
+    "timestamp": "2026-05-07T13:11:09.923250+00:00",
+    "agent": "action_planner",
+    "input_summary": "Here is the structured data extracted from the meeting notes:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"not specified\",\n    \"attendees\": [\n      \"Alan\",\n      \"Sarah\",\n      \"Tom\"\n    ]",
+    "output_preview": "```json\n{\n  \"actions\": [\n    {\n      \"action_id\": \"A001\",\n      \"description\": \"Deploy application using v2 API\",\n      \"owner\": \"Tom\",\n      \"deadline\": \"2025-01-10\",\n      \"priority\": \"high\",\n      \"basis_for_owner\": \"Explicitly assigned in unresolved_items as owner of deploy task\",\n      \"basis_f",
+    "tokens_used": 1230,
+    "revision_round": 0
+  },
+  {
+    "timestamp": "2026-05-07T13:11:16.490740+00:00",
+    "agent": "critic",
+    "input_summary": "Here is the original extracted meeting data:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"not specified\",\n    \"attendees\": [\n      \"Alan\",\n      \"Sarah\",\n      \"Tom\"\n    ],\n    \"project\": ",
+    "output_preview": "```json\n{\n  \"approved\": false,\n  \"overall_score\": 6,\n  \"strengths\": [\n    \"All three unresolved items from the source material are captured as actions\",\n    \"Owner assignments are explicit and traceable for A001 and A002\",\n    \"TBC designations are used appropriately with written justifications\",\n  ",
+    "tokens_used": 1710,
+    "revision_round": 0
+  },
+  {
+    "timestamp": "2026-05-07T13:11:20.332275+00:00",
+    "agent": "action_planner",
+    "input_summary": "Here is the structured data extracted from the meeting notes:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"not specified\",\n    \"attendees\": [\n      \"Alan\",\n      \"Sarah\",\n      \"Tom\"\n    ]",
+    "output_preview": "```json\n{\n  \"actions\": [\n    {\n      \"action_id\": \"A001\",\n      \"description\": \"Deploy to production\",\n      \"owner\": \"Tom\",\n      \"deadline\": \"TBC\",\n      \"priority\": \"high\",\n      \"basis_for_owner\": \"Explicitly assigned to Tom in unresolved_items\",\n      \"basis_for_deadline\": \"Meeting date not spe",
+    "tokens_used": 1491,
+    "revision_round": 1
+  },
+  {
+    "timestamp": "2026-05-07T13:11:29.656673+00:00",
+    "agent": "critic",
+    "input_summary": "Here is the original extracted meeting data:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"not specified\",\n    \"attendees\": [\n      \"Alan\",\n      \"Sarah\",\n      \"Tom\"\n    ],\n    \"project\": ",
+    "output_preview": "```json\n{\n  \"approved\": false,\n  \"overall_score\": 6,\n  \"strengths\": [\n    \"All three actions have named owners or explicit TBC with written justification\",\n    \"All deadlines are either ISO-convertible or TBC with clear reasoning\",\n    \"Dependencies are plausible: A001 (deploy) correctly depends on ",
+    "tokens_used": 1995,
+    "revision_round": 1
+  },
+  {
+    "timestamp": "2026-05-07T13:11:35.110393+00:00",
+    "agent": "action_planner",
+    "input_summary": "Here is the structured data extracted from the meeting notes:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"not specified\",\n    \"attendees\": [\n      \"Alan\",\n      \"Sarah\",\n      \"Tom\"\n    ]",
+    "output_preview": "```json\n{\n  \"actions\": [\n    {\n      \"action_id\": \"A001\",\n      \"description\": \"Deploy to production\",\n      \"owner\": \"Tom\",\n      \"deadline\": \"2025-01-10\",\n      \"priority\": \"high\",\n      \"basis_for_owner\": \"Tom was explicitly assigned this task in the meeting notes\",\n      \"basis_for_deadline\": \"M",
+    "tokens_used": 1805,
+    "revision_round": 2
+  },
+  {
+    "timestamp": "2026-05-07T13:11:43.874668+00:00",
+    "agent": "critic",
+    "input_summary": "Here is the original extracted meeting data:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"not specified\",\n    \"attendees\": [\n      \"Alan\",\n      \"Sarah\",\n      \"Tom\"\n    ],\n    \"project\": ",
+    "output_preview": "```json\n{\n  \"approved\": false,\n  \"overall_score\": 5,\n  \"strengths\": [\n    \"All three original unresolved items from the meeting are captured as actions (deploy, report, staging env).\",\n    \"The v2 API decision is not silently dropped; it is included as A004 with open questions.\",\n    \"Owner assignme",
+    "tokens_used": 2148,
+    "revision_round": 2
+  }
+]
