@@ -1,0 +1,53 @@
+{
+  "actions": [
+    {
+      "action_id": "A001",
+      "description": "Restore staging environment to operational status",
+      "owner": "TBC",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "No specific owner identified in meeting notes for infrastructure/environment issues. Requires clarification on who owns staging environment.",
+      "basis_for_deadline": "Meeting date not specified in extracted data, so 'Friday' cannot be mapped to a specific date. Deadline cannot be confirmed without knowing the meeting date.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A002",
+      "description": "Send report to client",
+      "owner": "Alan",
+      "deadline": "TBC",
+      "priority": "medium",
+      "basis_for_owner": "Alan explicitly mentioned in context as responsible for sending report to client.",
+      "basis_for_deadline": "No deadline specified in meeting notes. Dependency on deployment status is unresolved and affects deadline determination.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A003",
+      "description": "Fix login bug",
+      "owner": "Sarah",
+      "deadline": "TBC",
+      "priority": "TBC",
+      "basis_for_owner": "Sarah explicitly mentioned in context as responsible for fixing login bug.",
+      "basis_for_deadline": "No deadline specified in meeting notes. Priority and deadline depend on whether this is a deployment blocker.",
+      "depends_on": []
+    },
+    {
+      "action_id": "A004",
+      "description": "Deploy to production by Friday",
+      "owner": "Tom",
+      "deadline": "TBC",
+      "priority": "high",
+      "basis_for_owner": "Tom explicitly mentioned in context as responsible for deployment.",
+      "basis_for_deadline": "Friday mentioned but meeting date not specified, so actual date cannot be determined. Deadline set to TBC pending meeting date confirmation.",
+      "depends_on": [
+        "A001"
+      ]
+    }
+  ],
+  "open_questions": [
+    "Is the login bug (A003) a deployment blocker for the Friday release? This determines whether A003 should be high priority and whether A004 depends on A003.",
+    "Does the client report (A002) depend on successful production deployment? This affects the deadline and dependency chain for A002.",
+    "What is the actual meeting date? This is required to confirm that 'Friday' maps to the correct calendar date for A001 and A004.",
+    "Who owns the staging environment restoration (A001)? Infrastructure team, DevOps, or another owner?",
+    "What is the deadline for the login bug fix (A003)? Is it tied to the Friday deployment or a separate timeline?"
+  ]
+}

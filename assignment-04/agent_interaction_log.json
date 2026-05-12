@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp": "2026-04-29T16:01:35.202902+00:00",
+    "agent": "note_parser",
+    "input_summary": "Here are the raw meeting notes to parse:\n\n<notes>\nSprint 4 Review - CRM/Payments Integration\n29 Apr 2026 // 10am BST (5pm SGT)\n\nAttendees: Alan (DM), Sarah (TL), Marco (CRM dev), Priya (payments, SG)\n",
+    "output_preview": "```json\n{\n  \"meeting_metadata\": {\n    \"date\": \"29 Apr 2026\",\n    \"attendees\": [\n      \"Alan (DM)\",\n      \"Sarah (TL)\",\n      \"Marco (CRM dev)\",\n      \"Priya (payments, SG)\",\n      \"James (DevOps, SG)\"\n    ],\n    \"project\": \"CRM/Payments Integration\"\n  },\n  \"decisions_made\": [\n    \"Auth token flow de",
+    "tokens_used": 1962,
+    "revision_round": 0
+  },
+  {
+    "timestamp": "2026-04-29T16:01:51.217740+00:00",
+    "agent": "action_planner",
+    "input_summary": "Here is the structured data extracted from the meeting notes:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"29 Apr 2026\",\n    \"attendees\": [\n      \"Alan (DM)\",\n      \"Sarah (TL)\",\n      \"Ma",
+    "output_preview": "```json\n{\n  \"actions\": [\n    {\n      \"action_id\": \"A001\",\n      \"description\": \"Investigate and resolve API auth token 401 error on payments sandbox. Determine whether issue is CRM-side config, payments API gateway config, or token scope configuration. This is blocking all payments integration testi",
+    "tokens_used": 3456,
+    "revision_round": 0
+  },
+  {
+    "timestamp": "2026-04-29T16:01:55.482567+00:00",
+    "agent": "critic",
+    "input_summary": "Here is the original extracted meeting data:\n\n<extracted_data>\n{\n  \"meeting_metadata\": {\n    \"date\": \"29 Apr 2026\",\n    \"attendees\": [\n      \"Alan (DM)\",\n      \"Sarah (TL)\",\n      \"Marco (CRM dev)\",\n ",
+    "output_preview": "```json\n{\n  \"approved\": true,\n  \"overall_score\": 8,\n  \"strengths\": [\n    \"All 11 actions have named owners with clear justification for ownership assignments\",\n    \"All deadlines are present and ISO-formatted with explicit reasoning tied to project constraints (Priya's leave, go-live timeline, block",
+    "tokens_used": 3769,
+    "revision_round": 0
+  }
+]

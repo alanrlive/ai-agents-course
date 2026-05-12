@@ -1,0 +1,13 @@
+CRM payments meeting
+sometime last week
+people from both teams were there, some from singapore
+
+- the API thing still isnt working, someone needs to look at it
+- sandbox keeps dropping out, really annoying, no ticket yet
+- marco showed the field mapping, some fields dont work right
+- security thing is overdue, needs chasing
+- not sure if may is still realistic
+- james needs something from someone before he can update the pipeline
+- timezone thing is a problem for scheduling
+- null fields - no decision yet
+- need to decide who owns what going forward
